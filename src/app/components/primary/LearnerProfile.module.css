@@ -1,0 +1,107 @@
+.section {
+  padding: 50px 0;
+  position: relative;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.primary {
+  color: #831719;
+}
+
+.picture {
+  position: relative;
+  text-align: center;
+}
+
+.bubble {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #8b131a;
+  position: absolute;
+}
+
+.large {
+  width: 120px;
+  height: 120px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #8b131a;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(1);
+  border-radius: 50%;
+  text-align: center;
+}
+
+/* --- Tooltip positions --- */
+.tooltip {
+  position: absolute;
+  top: 75%;
+  right: 25%;
+}
+
+.tooltip1 {
+  position: absolute;
+  top: 60%;
+  right: 20%;
+}
+
+.tooltip2 {
+  position: absolute;
+  top: 65%;
+  left: 30%;
+}
+
+.tooltip3 {
+  position: absolute;
+  top: 45%;
+  left: 28%;
+}
+
+.tooltip4 {
+  position: absolute;
+  top: 55%;
+  right: 28%;
+}
+
+.tooltip5 {
+  position: absolute;
+  top: 38%;
+  right: 32%;
+}
+
+.tooltip6 {
+  position: absolute;
+  top: 28%;
+  right: 38%;
+}
+
+.tooltip7 {
+  position: absolute;
+  top: 45%;
+  left: 35%;
+}
+
+.tooltip8 {
+  position: absolute;
+  top: 30%;
+  left: 40%;
+}
+
+.tooltip9 {
+  position: absolute;
+  top: 25%;
+  right: 50%;
+}

@@ -1,0 +1,18 @@
+'use client';
+import { useEffect } from 'react';
+import { usePathname } from 'next/navigation';
+
+export default function GTMRouteTracker() {
+  const pathname = usePathname();
+
+  useEffect(() => {
+    if (window.dataLayer) {
+      window.dataLayer.push({
+        event: 'pageview',
+        page: pathname,
+      });
+    }
+  }, [pathname]);
+
+  return null;
+}

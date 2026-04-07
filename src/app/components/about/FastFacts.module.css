@@ -1,0 +1,92 @@
+.fastFactsSection {
+  margin: 60px 0;
+}
+
+.title {
+  font-size: 8rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.title .highlight {
+  color: #831719;
+}
+
+.accordion {
+  border: none;
+}
+
+.accordionItem {
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 0;
+}
+
+.accordionButton {
+  background: transparent;
+  border: none;
+  width: 100%;
+  text-align: left;
+  padding: 20px 60px 20px 0;
+  font-size: 30px;
+   color: #80191b;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.accordionButton:hover {
+  color: #a01f21;
+}
+
+.accordionButton::after {
+  content: '+';
+  position: absolute;
+  right: 0;
+  font-size: 2rem;
+  font-weight: 300;
+  transition: transform 0.3s ease;
+  color: #831719;
+}
+
+.accordionButton.active::after {
+  content: '−';
+}
+
+.accordionContent {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  padding: 0 20px 0 0;
+}
+
+.accordionContent.active {
+  max-height: 600px;
+  padding: 0 20px 25px 0;
+}
+
+.accordionContent p {
+  color: #1B1B1B;
+  font-size: 18px;
+  line-height: 26px;
+  margin: 0;
+}
+/* 
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .accordionButton {
+    font-size: 1.1rem;
+    padding: 18px 50px 18px 0;
+  }
+  
+  .accordionButton::after {
+    font-size: 1.8rem;
+  }
+} */
