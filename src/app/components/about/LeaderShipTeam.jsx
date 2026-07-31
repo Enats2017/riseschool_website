@@ -1,7 +1,7 @@
 import { TeamCard } from "./TeamCard"
 const teams = [
     {
-        title: "Founder & CEO",
+        title: "President – Rising India School Excellence Management Private Limited",
         name: "Ms. Payal Gaba",
         img: "/images/leadership_team/payal.png",
         summary:
