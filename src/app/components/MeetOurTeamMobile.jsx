@@ -10,7 +10,7 @@ const team = [
     {
         id: 1,
         name: "PAYAL GABA",
-        role: "Founder & CEO",
+        role: "President – Rising India School Excellence Management Private Limited",
         img: "/images/team/payal-gaba.webp",
     },
     {

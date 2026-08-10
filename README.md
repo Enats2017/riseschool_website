@@ -34,3 +34,21 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+
+
+# For Local just clone the project
+npm run dev
+
+# Build command 
+npm run build
+
+# After Build Serve Build Folder to check properly OUT Folder Created or not
+npx serve out
+
+# Once Build Folder created then upload on C Panel (PATH)
+public_html/riseschool_new.in
+
+# Extract OUT Folder and Move ALL file to this below path
+public_html/riseschool_new.in
