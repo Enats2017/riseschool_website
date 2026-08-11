@@ -88,28 +88,28 @@ const teams = [
         quote:
             "Education is not just about content—it’s about connection. When we empower teachers and engage learners with purpose, we create lifelong thinkers and compassionate leaders.",
     },
-    {
-        title: "Administration and Admission Manager",
-        name: "Aleena (Veena) Vikas Rane",
-        img: "/images/leadership_team/aleena.jpg",
-        summary:
-            "With over a decade of experience in educational administration and institutional management,..",
-        content: (
-            <>
-                <p>
-                    Ms. Aleena Rane brings a strong blend of operational expertise, academic coordination, and people management skills. Her career spans reputed institutions including IIHM Goa, Bloomz International School, and CII Institute of Hospitality, where she has successfully led end-to-end administration, admissions, examinations, and student engagement functions.
-                </p>
-                <p>
-                    A seasoned education professional, Ms. Rane has played a key role in establishing academic systems, ensuring compliance with regulatory bodies such as CBSE, IGNOU, and HRDF, and managing affiliations and audits with precision. Her leadership extends across staff recruitment, payroll management, budgeting, event coordination, and marketing initiatives, contributing to smooth institutional functioning and stakeholder satisfaction.
-                </p>
-                <p>
-                    At Rising India School of Excellence, she spearheads the administration and enrolment operations, ensuring seamless processes, transparent communication, and an engaging experience for students and parents. Her proactive approach, team-building ability, and commitment to excellence make her a valued pillar of the school’s management.
-                </p>
-            </>
-        ),
-        quote:
-            "Efficiency and empathy are the foundations of great administration — when systems run smoothly and people feel supported, learning truly thrives.",
-    },
+    // {
+    //     title: "Administration and Admission Manager",
+    //     name: "Aleena (Veena) Vikas Rane",
+    //     img: "/images/leadership_team/aleena.jpg",
+    //     summary:
+    //         "With over a decade of experience in educational administration and institutional management,..",
+    //     content: (
+    //         <>
+    //             <p>
+    //                 Ms. Aleena Rane brings a strong blend of operational expertise, academic coordination, and people management skills. Her career spans reputed institutions including IIHM Goa, Bloomz International School, and CII Institute of Hospitality, where she has successfully led end-to-end administration, admissions, examinations, and student engagement functions.
+    //             </p>
+    //             <p>
+    //                 A seasoned education professional, Ms. Rane has played a key role in establishing academic systems, ensuring compliance with regulatory bodies such as CBSE, IGNOU, and HRDF, and managing affiliations and audits with precision. Her leadership extends across staff recruitment, payroll management, budgeting, event coordination, and marketing initiatives, contributing to smooth institutional functioning and stakeholder satisfaction.
+    //             </p>
+    //             <p>
+    //                 At Rising India School of Excellence, she spearheads the administration and enrolment operations, ensuring seamless processes, transparent communication, and an engaging experience for students and parents. Her proactive approach, team-building ability, and commitment to excellence make her a valued pillar of the school’s management.
+    //             </p>
+    //         </>
+    //     ),
+    //     quote:
+    //         "Efficiency and empathy are the foundations of great administration — when systems run smoothly and people feel supported, learning truly thrives.",
+    // },
     {
         title: "Deputy General Manager – Strategy & Planning",
         name: "Riya Jitendra Bohara",
@@ -152,38 +152,38 @@ const teams = [
         quote:
             "The right design has the ability to transform a space into an inspiring environment that is future ready.",
     },
-    {
-        title: "Brand Head – Rising India School of Excellence",
-        name: "Sarvesha Mall",
-        img: "/images/leadership_team/sarvesha.jpg",
-        summary:
-            "As a branding and marketing professional with over 12 years of corporate experience across diverse industries,..",
-        content: (
-            <>
-                <p>
-                    Including education, lifestyle, and automotive. Currently serving as the
-                    <strong className="text-[#831719]"> Brand Head at Rising India School of Excellence</strong>
-                    she has previously held leadership roles at
-                    <strong className="text-[#831719]"> Aptech Ltd. </strong>
-                    and
-                    <strong className="text-[#831719]"> Audi India</strong>
-                    , where she successfully drove marketing, brand strategy, and digital growth initiatives. A graduate in
-                    <strong className="text-[#831719]"> Mass Communications and Videography</strong>
-                    from
-                    <strong className="text-[#831719]"> St. Xavier’s University</strong>
-                    , with a
-                    <strong className="text-[#831719]"> Diploma in Advertising</strong>
-                    and a
-                    <strong className="text-[#831719]"> Postgraduate qualification in Digital Marketing from MICA (upGrad)</strong>
-                    , Sarvesha combines creative vision with strategic acumen. Her expertise spans
-                    <strong className="text-[#831719]"> brand management, public relations, digital marketing, content strategy, and lifestyle consultancy</strong>
-                    . Known for her people-centric approach and strong networking skills, she believes in the power of collaboration, innovation, and purpose-driven communication to build brands that make a lasting impact.
-                </p>
-            </>
-        ),
-        quote:
-            "Driven by creativity with purpose - believes in transforming ideas into impactful brand experiences through innovation, teamwork, and consistency.",
-    },
+    // {
+    //     title: "Brand Head – Rising India School of Excellence",
+    //     name: "Sarvesha Mall",
+    //     img: "/images/leadership_team/sarvesha.jpg",
+    //     summary:
+    //         "As a branding and marketing professional with over 12 years of corporate experience across diverse industries,..",
+    //     content: (
+    //         <>
+    //             <p>
+    //                 Including education, lifestyle, and automotive. Currently serving as the
+    //                 <strong className="text-[#831719]"> Brand Head at Rising India School of Excellence</strong>
+    //                 she has previously held leadership roles at
+    //                 <strong className="text-[#831719]"> Aptech Ltd. </strong>
+    //                 and
+    //                 <strong className="text-[#831719]"> Audi India</strong>
+    //                 , where she successfully drove marketing, brand strategy, and digital growth initiatives. A graduate in
+    //                 <strong className="text-[#831719]"> Mass Communications and Videography</strong>
+    //                 from
+    //                 <strong className="text-[#831719]"> St. Xavier’s University</strong>
+    //                 , with a
+    //                 <strong className="text-[#831719]"> Diploma in Advertising</strong>
+    //                 and a
+    //                 <strong className="text-[#831719]"> Postgraduate qualification in Digital Marketing from MICA (upGrad)</strong>
+    //                 , Sarvesha combines creative vision with strategic acumen. Her expertise spans
+    //                 <strong className="text-[#831719]"> brand management, public relations, digital marketing, content strategy, and lifestyle consultancy</strong>
+    //                 . Known for her people-centric approach and strong networking skills, she believes in the power of collaboration, innovation, and purpose-driven communication to build brands that make a lasting impact.
+    //             </p>
+    //         </>
+    //     ),
+    //     quote:
+    //         "Driven by creativity with purpose - believes in transforming ideas into impactful brand experiences through innovation, teamwork, and consistency.",
+    // },
     {
         title: "Human Resource Manager",
         name: "Jyotsna Hiwalkar",
