@@ -40,7 +40,8 @@ export default function Footer() {
               <Link href="#" className="hover:text-red-200 transition-colors">TECHNOLOGY</Link>
               <Link href="#" className="hover:text-red-200 transition-colors">BEYOND ACADEMICS</Link>
               <Link href="/contact" className="hover:text-red-200 transition-colors">NEWS & EVENTS</Link>
-              <Link href="/career" className="hover:text-red-200 transition-colors">Careers & Blogs</Link>
+              <Link href="/career" className="hover:text-red-200 transition-colors">Careers</Link>
+              <Link href="/blog" className="hover:text-red-200 transition-colors">Blog</Link>
               <Link href="/terms" className="hover:text-red-200 transition-colors">Contact Us</Link>
             </div>
 
@@ -63,7 +64,8 @@ export default function Footer() {
             <ul className="hidden md:block space-y-2 text-[18px] mt-6">
               <li><Link href="beyond-academics" className="hover:text-red-200 transition-colors">BEYOND ACADEMICS</Link></li>
               <li><Link href="#" className="hover:text-red-200 transition-colors">News & Events</Link></li>
-              <li><Link href="/career" className="hover:text-red-200 transition-colors">Careers & Blogs</Link></li>
+              <li><Link href="/career" className="hover:text-red-200 transition-colors">Careers</Link></li>
+              <li><Link href="/blog" className="hover:text-red-200 transition-colors">Blog</Link></li>
               <li><Link href="/contact" className="hover:text-red-200 transition-colors">Contact Us</Link></li>
             </ul>
           </div>

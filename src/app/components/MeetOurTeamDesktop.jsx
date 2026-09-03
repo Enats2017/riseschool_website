@@ -31,6 +31,12 @@ const team = [
         role: "Education Director",
         img: "/images/team/zeenat_bandukwala.jpeg",
     },
+    {
+        id:7 ,
+        name: "Remi Rajan",
+        role: "PYPC Coordinator",
+        img: "/images/team/remi_rajan.png",
+    },
     // {
     //     id: 3,
     //     name: "Anu Monga",
