@@ -204,70 +204,70 @@ const teams = [
         quote:
             "Lead with empathy, nurture talent, and create an environment where every individual feels valued, motivated, and inspired to excel.",
     },
-    {
-        title: "Founder – White Canvas India",
-        name: "Samaresh Shah",
-        img: "/images/leadership_team/samaresh.jpg",
-        summary:
-            "A visionary leader and changemaker in the K–12 education space,..",
-        content: (
-            <>
-                <p><strong className="text-[#831719]">Samaresh Shah</strong> is the Founder of <strong className="text-[#831719]">White Canvas India</strong>, dedicated to transforming education and empowering the next generation. With initiatives aligned to the <strong className="text-[#831719]">Prime Minister’s vision of Viksit Bharat @2047</strong>, he holds a <strong className="text-[#831719]">dual national record</strong> for achieving unprecedented admission facilitation footfall across India’s leading progressive schools.</p>
-                <p>As <strong className="text-[#831719]">Honorary Mentor of Change</strong> with <strong className="text-[#831719]">Atal Innovation Mission (NITI Aayog)</strong> and <strong className="text-[#831719]">Immediate Co-Chair of PhD Chamber of Commerce and Industry</strong>, Samaresh has been instrumental in driving national entrepreneurship and innovation programs. He is the mind behind the globally recognized <strong className="text-[#831719]">Young CEO Program</strong>, the world’s largest entrepreneurial mindset initiative for teenagers, acknowledged even by the <strong className="text-[#831719]">Prime Minister’s Office</strong>.
+    // {
+    //     title: "Founder – White Canvas India",
+    //     name: "Samaresh Shah",
+    //     img: "/images/leadership_team/samaresh.jpg",
+    //     summary:
+    //         "A visionary leader and changemaker in the K–12 education space,..",
+    //     content: (
+    //         <>
+    //             <p><strong className="text-[#831719]">Samaresh Shah</strong> is the Founder of <strong className="text-[#831719]">White Canvas India</strong>, dedicated to transforming education and empowering the next generation. With initiatives aligned to the <strong className="text-[#831719]">Prime Minister’s vision of Viksit Bharat @2047</strong>, he holds a <strong className="text-[#831719]">dual national record</strong> for achieving unprecedented admission facilitation footfall across India’s leading progressive schools.</p>
+    //             <p>As <strong className="text-[#831719]">Honorary Mentor of Change</strong> with <strong className="text-[#831719]">Atal Innovation Mission (NITI Aayog)</strong> and <strong className="text-[#831719]">Immediate Co-Chair of PhD Chamber of Commerce and Industry</strong>, Samaresh has been instrumental in driving national entrepreneurship and innovation programs. He is the mind behind the globally recognized <strong className="text-[#831719]">Young CEO Program</strong>, the world’s largest entrepreneurial mindset initiative for teenagers, acknowledged even by the <strong className="text-[#831719]">Prime Minister’s Office</strong>.
 
-                    An <strong className="text-[#831719]"> Electronics Engineer</strong> with executive education from <strong className="text-[#831719]">IIM Rohtak</strong>, he brings corporate leadership experience from <strong className="text-[#831719]">IBM, Capgemini, and Hewlett-Packard</strong> to the education sector.</p>
-                <p>Recipient of <strong className="text-[#831719]">ET Now Leaders of Tomorrow, CNBC Thinkers of Tomorrow</strong> , and <strong className="text-[#831719]">BW Education STEM Solution of the Year</strong>, Samaresh also founded the <strong className="text-[#831719]">White Canvas Education Council</strong>, a collaborative platform for educators and policymakers shaping the future of learning.
+    //                 An <strong className="text-[#831719]"> Electronics Engineer</strong> with executive education from <strong className="text-[#831719]">IIM Rohtak</strong>, he brings corporate leadership experience from <strong className="text-[#831719]">IBM, Capgemini, and Hewlett-Packard</strong> to the education sector.</p>
+    //             <p>Recipient of <strong className="text-[#831719]">ET Now Leaders of Tomorrow, CNBC Thinkers of Tomorrow</strong> , and <strong className="text-[#831719]">BW Education STEM Solution of the Year</strong>, Samaresh also founded the <strong className="text-[#831719]">White Canvas Education Council</strong>, a collaborative platform for educators and policymakers shaping the future of learning.
 
-                </p>
-            </>
-        ),
-        quote:
-            "Believes in creating meaningful impact through innovation, collaboration, and purpose-driven leadership, inspiring educators, entrepreneurs, and young changemakers nationwide.",
-    },
-    {
-        title:
-            (
-                <>
+    //             </p>
+    //         </>
+    //     ),
+    //     quote:
+    //         "Believes in creating meaningful impact through innovation, collaboration, and purpose-driven leadership, inspiring educators, entrepreneurs, and young changemakers nationwide.",
+    // },
+    // {
+    //     title:
+    //         (
+    //             <>
 
-                    <span className="block">Chairperson Emeritus, The Association of International Schools in India (TAISI)</span>
-                    <span className="block"> Founder, Pioneering Schools</span>
-                    <span className="block">Senior Education Consultant, Education Design International</span>
-                </>
-            )
-        ,
-        name: "Anu Monga (Advisor)",
-        img: "/images/leadership_team/anu.jpg",
-        summary: "Anu Monga is a distinguished educator,..",
-        content: (
-            <>
-                <p>School leader, and entrepreneur with over 30 years of experience in international education. She has held significant roles, including Head of School at Bangalore International School and Director of Development at Kodaikanal International School. As Chairperson Emeritus of TAISI, she has been instrumental in fostering professional development and innovation across India's international schools. Anu is also a Senior Education Consultant at Education Design International, where she collaborates with school leaders to enhance teaching-learning outcomes and elevate curricula.</p>
-            </>
-        ),
-        quote: `Anu's leadership philosophy centers on "heart-led leadership," emphasizing the importance of human connection, empathy, and joy in the learning process. She advocates for inclusive education that recognizes and celebrates diversity, ensuring that every child feels valued and supported. Her commitment to creating nurturing learning environments reflects her belief that education should be a transformative experience that empowers individuals and communities`,
-    },
-    {
-        title: "Education Technology Leader",
-        name: "Dr. Anuj Kacker",
-        img: "/images/leadership_team/anuj.jpg",
-        summary:
-            "Dr. Anuj Kacker is a veteran of the education, training, and skill development sector with over three decades of leadership experience...",
-        content: (
-            <>
-                <p>
-                    Former CEO and Board Director of Aptech Ltd., he played a pivotal role in making Aptech a global leader, impacting over 100,000 students annually across 1,000+ centres in more than 35 countries.
+    //                 <span className="block">Chairperson Emeritus, The Association of International Schools in India (TAISI)</span>
+    //                 <span className="block"> Founder, Pioneering Schools</span>
+    //                 <span className="block">Senior Education Consultant, Education Design International</span>
+    //             </>
+    //         )
+    //     ,
+    //     name: "Anu Monga (Advisor)",
+    //     img: "/images/leadership_team/anu.jpg",
+    //     summary: "Anu Monga is a distinguished educator,..",
+    //     content: (
+    //         <>
+    //             <p>School leader, and entrepreneur with over 30 years of experience in international education. She has held significant roles, including Head of School at Bangalore International School and Director of Development at Kodaikanal International School. As Chairperson Emeritus of TAISI, she has been instrumental in fostering professional development and innovation across India's international schools. Anu is also a Senior Education Consultant at Education Design International, where she collaborates with school leaders to enhance teaching-learning outcomes and elevate curricula.</p>
+    //         </>
+    //     ),
+    //     quote: `Anu's leadership philosophy centers on "heart-led leadership," emphasizing the importance of human connection, empathy, and joy in the learning process. She advocates for inclusive education that recognizes and celebrates diversity, ensuring that every child feels valued and supported. Her commitment to creating nurturing learning environments reflects her belief that education should be a transformative experience that empowers individuals and communities`,
+    // },
+    // {
+    //     title: "Education Technology Leader",
+    //     name: "Dr. Anuj Kacker",
+    //     img: "/images/leadership_team/anuj.jpg",
+    //     summary:
+    //         "Dr. Anuj Kacker is a veteran of the education, training, and skill development sector with over three decades of leadership experience...",
+    //     content: (
+    //         <>
+    //             <p>
+    //                 Former CEO and Board Director of Aptech Ltd., he played a pivotal role in making Aptech a global leader, impacting over 100,000 students annually across 1,000+ centres in more than 35 countries.
 
-                    Guided by his belief in long-term fulfilment of student aspirations, Dr. Kacker focuses on creating future-ready learners who are not only skilled but also well-rounded, confident individuals. He has directly engaged with tens of thousands of students, personal growth and value creation.
-                </p>
-                <p>
-                    Dr. Kacker has actively contributed to national and industry education policy, including India’s AVGC Task Force, ASEAN-India and Indo-Africa Business Councils, and the Media & Entertainment Sector Skill Council. A strong advocate for AI in education, he continues to drive AI-enabled initiatives for learning, recruitment, and career advisory.
+    //                 Guided by his belief in long-term fulfilment of student aspirations, Dr. Kacker focuses on creating future-ready learners who are not only skilled but also well-rounded, confident individuals. He has directly engaged with tens of thousands of students, personal growth and value creation.
+    //             </p>
+    //             <p>
+    //                 Dr. Kacker has actively contributed to national and industry education policy, including India’s AVGC Task Force, ASEAN-India and Indo-Africa Business Councils, and the Media & Entertainment Sector Skill Council. A strong advocate for AI in education, he continues to drive AI-enabled initiatives for learning, recruitment, and career advisory.
 
-                    An alumnus of <strong className="text-[#831719]">IIT</strong> and <strong className="text-[#831719]">IIM Kolkata</strong> , he holds an <strong className="text-[#831719]">Honorary Doctorate from Lincoln University, Malaysia</strong> and remains a thought leader in education and the future of work, sharing insights on AI, learning, and skill development.
-                </p>
-            </>
-        ),
-        quote:
-            "Dr. Kacker believes that education should empower every learner to be future-ready, fostering skills, confidence, and holistic growth to thrive personally and contribute meaningfully to society.",
-    },
+    //                 An alumnus of <strong className="text-[#831719]">IIT</strong> and <strong className="text-[#831719]">IIM Kolkata</strong> , he holds an <strong className="text-[#831719]">Honorary Doctorate from Lincoln University, Malaysia</strong> and remains a thought leader in education and the future of work, sharing insights on AI, learning, and skill development.
+    //             </p>
+    //         </>
+    //     ),
+    //     quote:
+    //         "Dr. Kacker believes that education should empower every learner to be future-ready, fostering skills, confidence, and holistic growth to thrive personally and contribute meaningfully to society.",
+    // },
 ];
 
 
