@@ -208,7 +208,7 @@ export default function Navbar() {
         </div>
 
 
-        {pathname === "/" && (
+        {/* {pathname === "/" && (
           <div className="absolute left-0 top-full w-full bg-[#F5C400] text-[#831719] text-center text-[12px] md:text-[20px] py-1 md:py-2 px-2">
             <span className="font-bold block md:inline">
               Launches Inaugural First Family Scholarship Upto 1 lac
@@ -218,7 +218,7 @@ export default function Navbar() {
               Admissions Open | Limited Seats Only
             </span>
           </div>
-        )}
+        )} */}
       </nav>
 
       {/* Mobile Slide-in Menu */}

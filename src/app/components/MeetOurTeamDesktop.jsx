@@ -25,25 +25,25 @@ const team = [
         role: "Founding Principal",
         img: "/images/team/aniket.png",
     },
-    {
-        id: 3,
-        name: "Anu Monga",
-        role: "Advisor - IB",
-        img: "/images/team/anu_monga.png",
-    },
-    {
-        id: 4,
-        name: "SAMARESH SHAH",
-        role: "Advisor - Entrepreneurial Mindset",
-        img: "/images/team/samaresh-sir.png",
-    },
+    // {
+    //     id: 3,
+    //     name: "Anu Monga",
+    //     role: "Advisor - IB",
+    //     img: "/images/team/anu_monga.png",
+    // },
+    // {
+    //     id: 4,
+    //     name: "SAMARESH SHAH",
+    //     role: "Advisor - Entrepreneurial Mindset",
+    //     img: "/images/team/samaresh-sir.png",
+    // },
     
-    {
-        id: 5,
-        name: "Dr. Anuj Kacker",
-        role: "Advisor - AI in Education",
-        img: "/images/team/ANUJ.webp",
-    },
+    // {
+    //     id: 5,
+    //     name: "Dr. Anuj Kacker",
+    //     role: "Advisor - AI in Education",
+    //     img: "/images/team/ANUJ.webp",
+    // },
 
 ];
 

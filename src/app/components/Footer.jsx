@@ -47,10 +47,10 @@ export default function Footer() {
             {/* Desktop: stacked links */}
             <ul className="hidden md:block space-y-2 text-[17px]">
               <li><Link href="#" className="hover:text-red-200 transition-colors">Home</Link></li>
-              <li><Link href="#" className="hover:text-red-200 transition-colors">About us</Link></li>
-              <li><Link href="#" className="hover:text-red-200 transition-colors">Campus </Link></li>
-              <li><Link href="#" className="hover:text-red-200 transition-colors">Academics</Link></li>
-              <li><Link href="#" className="hover:text-red-200 transition-colors">Technology</Link></li>
+              <li><Link href="/about-us" className="hover:text-red-200 transition-colors">About us</Link></li>
+              <li><Link href="/campus" className="hover:text-red-200 transition-colors">Campus </Link></li>
+              <li><Link href="academic-life" className="hover:text-red-200 transition-colors">Academics</Link></li>
+              <li><Link href="technology" className="hover:text-red-200 transition-colors">Technology</Link></li>
             </ul>
           </div>
 
@@ -61,7 +61,7 @@ export default function Footer() {
           
             {/* Desktop: stacked links */}
             <ul className="hidden md:block space-y-2 text-[18px] mt-6">
-              <li><Link href="#" className="hover:text-red-200 transition-colors">BEYOND ACADEMICS</Link></li>
+              <li><Link href="beyond-academics" className="hover:text-red-200 transition-colors">BEYOND ACADEMICS</Link></li>
               <li><Link href="#" className="hover:text-red-200 transition-colors">News & Events</Link></li>
               <li><Link href="/career" className="hover:text-red-200 transition-colors">Careers & Blogs</Link></li>
               <li><Link href="/contact" className="hover:text-red-200 transition-colors">Contact Us</Link></li>
@@ -103,10 +103,16 @@ export default function Footer() {
               INSTAGRAM
             </Link>
             <Link 
-              href="#" 
+              href="https://www.facebook.com/p/Rising-India-School-of-Excellence-61580507945155/" 
               className="px-6 py-2 border border-white/30 rounded-full text-xs font-medium hover:bg-white/10 transition-colors"
             >
               FACEBOOK
+            </Link>
+             <Link 
+              href="https://in.linkedin.com/company/rising-india-school-of-excellence" 
+              className="px-6 py-2 border border-white/30 rounded-full text-xs font-medium hover:bg-white/10 transition-colors"
+            >
+              LINKEDIN
             </Link>
           </div>
         </div>
