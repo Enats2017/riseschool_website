@@ -19,6 +19,12 @@ const team = [
         role: "Founding Principal",
         img: "/images/team/aniket.png",
     },
+    {
+        id: 6,
+        name: "Zeenat Bandukwala",
+        role: "Education Director",
+        img: "/images/team/zeenat_bandukwala.jpeg",
+    },
     // {
     //     id: 3,
     //     name: "Anu Monga",
