@@ -148,13 +148,13 @@ export default function Navbar() {
         {/* Desktop Links */}
         <div className="hidden lg:flex w-full">
           <div className="w-full flex justify-end ">
-            <div className="mx-4 flex flex-wrap gap-5 items-center justify-start">
+            <div className="mx-4 flex flex-nowrap gap-5 items-center justify-start">
               {linksData.map((linkObj, i) => (
                 <Link
                   key={i}
                   href={linkObj.linkUrl}
                   ref={el => (linksRef.current[i] = el)}
-                  className="transition-colors duration-500 uppercase text-[16px] font-[500]"
+                  className="transition-colors duration-500 uppercase text-[13px] xl:text-[14px] font-[500] whitespace-nowrap"
                   style={{ color: "#ffffff" }}
                 >
                   {linkObj.linkText}

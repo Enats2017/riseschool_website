@@ -26,6 +26,16 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" nighteye="disabled" className={montserrat.className}>
       <head>
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-G97N98TX13"></script>
+        <Script id="ga-script" strategy="afterInteractive">
+          {`
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-G97N98TX13');
+  `}
+        </Script>
         <Script id="gtm-script" strategy="afterInteractive">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
           new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
