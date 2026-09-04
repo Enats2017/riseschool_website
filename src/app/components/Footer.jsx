@@ -65,7 +65,7 @@ export default function Footer() {
               <li><Link href="beyond-academics" className="hover:text-red-200 transition-colors">BEYOND ACADEMICS</Link></li>
               <li><Link href="#" className="hover:text-red-200 transition-colors">News & Events</Link></li>
               <li><Link href="/career" className="hover:text-red-200 transition-colors">Careers</Link></li>
-              <li><Link href="/blog" className="hover:text-red-200 transition-colors">Blog</Link></li>
+              <li><Link href="/blog" className="hover:text-red-200 transition-colors">Blogs</Link></li>
               <li><Link href="/contact" className="hover:text-red-200 transition-colors">Contact Us</Link></li>
             </ul>
           </div>

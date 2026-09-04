@@ -18,7 +18,7 @@ const linksData = [
   { linkText: "Technology", linkUrl: "/technology" },
   { linkText: "Admissions", linkUrl: "/admissions" },
   { linkText: "Careers", linkUrl: "/career" },
-  { linkText: "Blog", linkUrl: "/blog" },
+  { linkText: "Blogs", linkUrl: "/blog" },
 ]
 
 export default function Navbar() {
