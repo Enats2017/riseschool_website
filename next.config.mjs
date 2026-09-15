@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',           // top-level, enables static export
+  trailingSlash: true, 
   devIndicators: {
     autoPrerender: false,     // hides auto prerender indicator
   },
