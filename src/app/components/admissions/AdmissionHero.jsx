@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import { dinNext , Montserrat} from "@/app/fonts";
-import Link from "next/link";
 import { Plus,Minus } from "lucide-react";
 
 export default function AdmissionProcess() {
@@ -73,16 +72,6 @@ export default function AdmissionProcess() {
             <p className="text-[#5d5d63] text-[17px]">
               Relationships are key to Rising India School of Excellence, and ours begins when you reach out to us. Please complete our inquiry form and create an account with us to initiate our journey.
             </p>
-
-            <Link
-              href="/registration-form"
-            >
-            <button
-              className=" bg-[#831719] text-white text-[20px] font-[600] mt-4 md:mt-8 px-12 py-2 rounded-full hover:bg-[#6b1215] transition"
-              >
-              Enquire Now
-              </button>
-            </Link>
           </div>
 
           {/* Step 2 */}

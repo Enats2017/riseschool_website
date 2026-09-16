@@ -1,9 +1,7 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
-
-export const metadata = {
-  title: "Blogs",
-};
+import { dinNext } from "@/app/fonts";
 
 const posts = [
   {
@@ -24,41 +22,142 @@ const posts = [
 
 export default function BlogPage() {
   return (
-    <main className="mx-auto max-w-4xl px-4 py-14 sm:py-20">
-      <h1 className="mb-10 text-3xl font-semibold tracking-tight text-neutral-900 sm:text-4xl">
-        Blogs
-      </h1>
-
-      <div className="grid gap-8 sm:grid-cols-2">
-        {posts.map((post) => (
-          <Link
-            key={post.slug}
-            href={`/blog/${post.slug}`}
-            className="group block overflow-hidden rounded-lg border border-neutral-200 transition hover:border-neutral-300"
+    <div className="overflow-x-hidden">
+      <main data-bg-color="#fff">
+        {/* Brand hero band */}
+        <section
+          style={{
+            background:
+              "radial-gradient(circle, rgb(189 180 180) 0%, #831719 70%)",
+            position: "relative",
+            overflow: "hidden",
+            paddingTop: "120px",
+            paddingBottom: "64px",
+          }}
+        >
+          <div
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              maxWidth: "370px",
+              width: "100%",
+              zIndex: -1,
+              mixBlendMode: "difference",
+              pointerEvents: "none",
+            }}
           >
-            <div className="relative aspect-[4/3] w-full overflow-hidden bg-neutral-100">
-              <Image
-                src={post.image}
-                alt={post.title}
-                fill
-                sizes="(min-width: 640px) 50vw, 100vw"
-                className="object-cover transition duration-300 group-hover:scale-105"
-              />
+            <img src="/images/pattern-2.svg" alt="" style={{ width: "100%" }} />
+          </div>
+          <div
+            style={{
+              position: "absolute",
+              bottom: 0,
+              right: 0,
+              maxWidth: "370px",
+              width: "100%",
+              zIndex: -1,
+              mixBlendMode: "difference",
+              pointerEvents: "none",
+            }}
+          >
+            <img src="/images/pattern-3.svg" alt="" style={{ width: "100%" }} />
+          </div>
+
+          <div className="mx-auto max-w-4xl px-4 text-center text-white">
+            <p
+              className={`${dinNext.className} text-sm sm:text-base font-[700] uppercase tracking-[1px]`}
+            >
+              RISE Blog
+            </p>
+            <h1
+              className={`${dinNext.className} mt-2 text-[40px] sm:text-[56px] font-[700]`}
+              style={{ lineHeight: 1.1 }}
+            >
+              Blogs
+            </h1>
+          </div>
+        </section>
+
+        {/* Post cards — styled section instead of plain white */}
+        <section
+          style={{
+            position: "relative",
+            overflow: "hidden",
+            background:
+              "linear-gradient(180deg, #e7bcb1 0%, #f4dbd7 45%, #ebd3d3 100%)",
+          }}
+        >
+          {/* soft decorative blur, echoes the hero's shape-blur asset */}
+          <div
+            style={{
+              position: "absolute",
+              top: "-120px",
+              right: "-160px",
+              width: "480px",
+              height: "480px",
+              borderRadius: "9999px",
+              background:
+                "radial-gradient(circle, rgba(131,23,25,0.10) 0%, rgba(131,23,25,0) 70%)",
+              pointerEvents: "none",
+            }}
+          />
+          <div
+            style={{
+              position: "absolute",
+              bottom: "-100px",
+              left: "-140px",
+              width: "420px",
+              height: "420px",
+              borderRadius: "9999px",
+              background:
+                "radial-gradient(circle, rgba(131,23,25,0.08) 0%, rgba(131,23,25,0) 70%)",
+              pointerEvents: "none",
+            }}
+          />
+
+          <div className="relative mx-auto max-w-4xl px-4 py-14 sm:py-20">
+            <div className="grid gap-8 sm:grid-cols-2">
+              {posts.map((post) => (
+                <Link
+                  key={post.slug}
+                  href={`/blog/${post.slug}`}
+                  className="group block overflow-hidden rounded-xl bg-white shadow-[0_2px_10px_rgba(131,23,25,0.08)] ring-1 ring-[#831719]/10 transition hover:-translate-y-1 hover:shadow-[0_12px_28px_rgba(131,23,25,0.18)] hover:ring-[#831719]/30"
+                >
+                  <div className="relative aspect-[4/3] w-full overflow-hidden bg-neutral-100">
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      fill
+                      sizes="(min-width: 640px) 50vw, 100vw"
+                      className="object-cover transition duration-300 group-hover:scale-105"
+                    />
+                    <span
+                      className={`${dinNext.className} absolute left-4 top-4 rounded-full bg-[#831719] px-3 py-1 text-xs font-[700] uppercase tracking-wide text-white`}
+                    >
+                      RISE Blog
+                    </span>
+                  </div>
+                  <div className="p-5">
+                    <h2 className="text-lg font-semibold leading-snug text-neutral-900">
+                      {post.title}
+                    </h2>
+                    <p className="mt-2 text-sm leading-relaxed text-neutral-600">
+                      {post.excerpt}
+                    </p>
+                    <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[#831719]">
+                      Read more
+                      <span className="transition-transform group-hover:translate-x-1">
+                        &rarr;
+                      </span>
+                    </span>
+                  </div>
+                </Link>
+              ))}
             </div>
-            <div className="p-5">
-              <h2 className="text-lg font-semibold leading-snug text-neutral-900">
-                {post.title}
-              </h2>
-              <p className="mt-2 text-sm leading-relaxed text-neutral-600">
-                {post.excerpt}
-              </p>
-              <span className="mt-4 inline-block text-sm font-medium text-neutral-900 underline underline-offset-4">
-                Read more
-              </span>
-            </div>
-          </Link>
-        ))}
-      </div>
-    </main>
+          </div>
+        </section>
+      </main>
+    </div>
   );
 }
