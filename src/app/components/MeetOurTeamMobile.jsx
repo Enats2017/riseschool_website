@@ -17,7 +17,7 @@ const team = [
         id: 2,
         name: "Aniket A Salunkhe",
         role: "Founding Principal",
-        img: "/images/team/aniket.png",
+        img: "/images/team/aniket.jpeg",
     },
     {
         id: 6,
@@ -29,7 +29,7 @@ const team = [
         id:7 ,
         name: "Remi Rajan",
         role: "PYPC Coordinator",
-        img: "/images/team/remi_rajan.png",
+        img: "/images/team/remi_rajan.jpeg",
     },
     // {
     //     id: 3,
