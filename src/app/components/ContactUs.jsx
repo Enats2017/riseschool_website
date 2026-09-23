@@ -1,41 +1,63 @@
 "use client";
 import { useState } from "react";
 
+// URL of the PHP file you uploaded. Set NEXT_PUBLIC_CONTACT_API in .env.local
+// or replace the fallback below.
+const CONTACT_API =
+  process.env.NEXT_PUBLIC_CONTACT_API || "https://riseschool.in/contact.php";
+  // process.env.NEXT_PUBLIC_CONTACT_API || "http://localhost/riseschool_website/contact.php";
+
 export const ContactUs = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
-    message: ""
+    message: "",
+    consent: false,
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [status, setStatus] = useState({ type: "", text: "" });
 
   const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
+    const { name, value, type, checked } = e.target;
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: type === "checkbox" ? checked : value,
     }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      console.log("Form submitted:", formData);
-      setIsSubmitting(false);
-      // Reset form
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        message: ""
+    setStatus({ type: "", text: "" });
+
+    try {
+      const res = await fetch(CONTACT_API, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
       });
-      alert("Message sent successfully!");
-    }, 1000);
+
+      const data = await res.json().catch(() => ({}));
+
+      if (!res.ok || !data.success) {
+        throw new Error(data.message || "Failed to send message.");
+      }
+
+      setStatus({
+        type: "success",
+        text: data.message || "Message sent successfully!",
+      });
+      setFormData({ name: "", email: "", phone: "", message: "", consent: false });
+    } catch (err) {
+      setStatus({
+        type: "error",
+        text: err.message || "Something went wrong. Please try again.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -119,6 +141,9 @@ export const ContactUs = () => {
                 <input
                   type="checkbox"
                   id="consent"
+                  name="consent"
+                  checked={formData.consent}
+                  onChange={handleInputChange}
                   required
                   className="mt-1 w-4 h-4 text-red-800 border-gray-300 rounded focus:ring-red-800"
                 />
@@ -127,6 +152,18 @@ export const ContactUs = () => {
                   Email, ICS or WhatsApp.
                 </label>
               </div>
+
+              {/* Status Message */}
+              {status.text && (
+                <p
+                  role="alert"
+                  className={`text-sm font-medium ${
+                    status.type === "success" ? "text-green-700" : "text-red-700"
+                  }`}
+                >
+                  {status.text}
+                </p>
+              )}
 
               {/* Submit Button */}
               <button

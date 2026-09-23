@@ -98,7 +98,7 @@ export default function Footer() {
           {/* Social Buttons */}
           <div className="flex gap-4">
             <Link 
-              href="https://www.instagram.com/riseinternational.school?igsh=YWN4eWp6dWw2NDU5&utm_source=qr"
+              href="https://www.instagram.com/risingindiaschoolofexcellence?stkn=YWN4eWp6dWw2NDU5&utm_source=qr"
               target="_blank"
               className="px-6 py-2 border border-white/30 rounded-full text-xs font-medium hover:bg-white/10 transition-colors"
             >

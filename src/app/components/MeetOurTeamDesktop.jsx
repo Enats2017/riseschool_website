@@ -23,19 +23,19 @@ const team = [
         id: 2,
         name: "Aniket A Salunkhe",
         role: "Founding Principal",
-        img: "/images/team/aniket.jpeg",
+        img: "/images/team/aniket.png",
     },
     {
         id: 6,
         name: "Zeenat Bandukwala",
         role: "Education Director",
-        img: "/images/team/zeenat_bandukwala.jpeg",
+        img: "/images/team/zeenat_bandukwala.png",
     },
     {
         id:7 ,
         name: "Remi Rajan",
         role: "PYPC Coordinator",
-        img: "/images/team/remi_rajan.jpeg",
+        img: "/images/team/remi_rajan.png",
     },
     // {
     //     id: 3,
