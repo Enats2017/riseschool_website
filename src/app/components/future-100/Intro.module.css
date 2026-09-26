@@ -1,0 +1,142 @@
+.intro {
+  position: relative;
+  background: #fff;
+  padding-bottom: var(--f100-section-y);
+}
+
+.media {
+  position: relative;
+  height: clamp(220px, 56vw, 420px);
+  -webkit-mask-image: linear-gradient(to bottom, #000 62%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 62%, transparent 100%);
+}
+
+.img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 60% 50%;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  margin-top: -24px;
+}
+
+.copy {
+  max-width: 640px;
+}
+
+/* the section heading's lead line is lighter and larger here, as in the reference */
+.copy header {
+  margin-bottom: 18px;
+}
+
+.copy header h2 > span:first-child {
+  font-weight: 400;
+}
+
+.rays {
+  display: none;
+}
+
+.tagline {
+  font-style: italic;
+  font-weight: 700;
+  font-size: clamp(1.08rem, 1.9vw, 1.55rem);
+  line-height: 1.35;
+  color: var(--f100-ink);
+  margin-bottom: clamp(16px, 2.4vw, 28px);
+}
+
+.body {
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+  line-height: 1.75;
+  color: #1b1b1b;
+  max-width: 58ch;
+}
+
+.body + .body {
+  margin-top: 14px;
+}
+
+.body strong {
+  font-weight: 700;
+}
+
+div.cta {
+  margin-top: clamp(28px, 4vw, 44px);
+}
+
+/* ---------- Desktop: measured from the reference ---------- */
+@media (min-width: 1200px) {
+  .intro {
+    height: calc(870 * var(--u));
+    padding: calc(58 * var(--u)) 0 0;
+    overflow: hidden;
+  }
+
+  .media {
+    position: absolute;
+    top: 0;
+    left: calc(753 * var(--u));
+    width: calc(1920 * var(--u));
+    height: calc(1080 * var(--u));
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.45) 14%, #000 30%);
+    mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.45) 14%, #000 30%);
+  }
+
+  .inner {
+    margin-top: 0;
+  }
+
+  .copy {
+    max-width: calc(1180 * var(--u));
+  }
+
+  .copy header {
+    margin-bottom: 0;
+  }
+
+  .copy header h2 > span:first-child {
+    font-size: calc(45 * var(--u));
+    line-height: 1.2;
+  }
+
+  .copy header h2 > span:last-child {
+    font-size: calc(85 * var(--u));
+    line-height: 1.1;
+  }
+
+  .copy {
+    position: relative;
+  }
+
+  .rays {
+    display: block;
+    position: absolute;
+    left: calc(625 * var(--u));
+    top: calc(-22 * var(--u));
+    width: calc(48 * var(--u));
+    height: auto;
+  }
+
+  .tagline {
+    margin: calc(26 * var(--u)) 0 0;
+    font-size: calc(40 * var(--u));
+  }
+
+  .body {
+    max-width: calc(1010 * var(--u));
+    margin-top: calc(56 * var(--u));
+    font-size: max(16px, calc(36 * var(--u)));
+    line-height: 1.58;
+  }
+
+  div.cta {
+    margin-top: calc(90 * var(--u));
+  }
+}

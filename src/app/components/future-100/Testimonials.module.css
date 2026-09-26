@@ -1,0 +1,160 @@
+.section {
+  position: relative;
+  padding-block: var(--f100-section-y);
+  background: #fff;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 20px;
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(16px, 2vw, 32px);
+    max-width: none;
+  }
+}
+
+.card {
+  --bg: #fff7e9;
+  --mark: #fcd48a;
+  background: var(--bg);
+  border-radius: 10px;
+}
+
+.card[data-tone="sky"] {
+  --bg: #e6f9ff;
+  --mark: #9fdcf2;
+}
+
+.card[data-tone="rose"] {
+  --bg: #ffe9e9;
+  --mark: #f7b5b5;
+}
+
+.figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+  padding: clamp(22px, 3vw, 30px) clamp(18px, 2.6vw, 28px) clamp(20px, 2.6vw, 26px);
+  text-align: center;
+}
+
+.mark {
+  width: 38px;
+  height: auto;
+  fill: var(--mark);
+  margin-bottom: 14px;
+}
+
+.quote {
+  margin: 0;
+  font-style: italic;
+  font-size: clamp(0.94rem, 1.2vw, 1.05rem);
+  line-height: 1.6;
+  color: #1f1f1f;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 24px;
+  text-align: left;
+}
+
+.avatar {
+  flex: none;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--f100-yellow);
+}
+
+.name {
+  display: block;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--f100-maroon);
+}
+
+.grade {
+  display: block;
+  font-size: 0.88rem;
+  color: #333;
+}
+
+/* ---------- Desktop: measured from the 1920px reference ---------- */
+@media (min-width: 1200px) {
+  .section {
+    padding-block: calc(54 * var(--u)) calc(82 * var(--u));
+  }
+
+  .head > header {
+    margin-bottom: calc(30 * var(--u));
+  }
+
+  .grid {
+    width: calc(1730 * var(--u));
+    max-width: 100%;
+    gap: calc(32 * var(--u));
+  }
+
+  .card {
+    min-height: calc(717 * var(--u));
+    border-radius: calc(12 * var(--u));
+  }
+
+  .figure {
+    padding: calc(34 * var(--u)) calc(36 * var(--u)) calc(43 * var(--u));
+  }
+
+  .quote {
+    color: #111;
+  }
+
+  .mark {
+    width: calc(70 * var(--u));
+    margin-bottom: calc(22 * var(--u));
+  }
+
+  .quote {
+    font-size: max(14px, calc(25 * var(--u)));
+    line-height: 1.52;
+  }
+
+  .author {
+    gap: calc(12 * var(--u));
+    padding-top: calc(28 * var(--u));
+  }
+
+  .avatar {
+    width: calc(85 * var(--u));
+    height: calc(85 * var(--u));
+    border-width: calc(3 * var(--u));
+  }
+
+  .name {
+    font-size: max(15px, calc(29.6 * var(--u)));
+    font-weight: 600;
+  }
+
+  .grade {
+    font-size: max(13px, calc(25 * var(--u)));
+  }
+
+  div.cta {
+    margin-top: calc(52 * var(--u));
+  }
+}

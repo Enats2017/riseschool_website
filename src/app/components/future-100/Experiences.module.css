@@ -1,0 +1,176 @@
+.wrap {
+  position: relative;
+}
+
+.section {
+  position: relative;
+  padding-block: var(--f100-section-y);
+}
+
+.plane,
+.bulb,
+.block,
+.rocket {
+  display: none;
+  position: absolute;
+  height: auto;
+  pointer-events: none;
+}
+
+@media (min-width: 900px) {
+  .plane,
+  .bulb {
+    display: block;
+  }
+
+  .plane {
+    top: -6px;
+    left: 2%;
+    width: clamp(90px, 10vw, 130px);
+  }
+
+  .bulb {
+    top: 64px;
+    right: 6%;
+    width: clamp(36px, 3.4vw, 48px);
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(18px, 3vw, 28px) clamp(12px, 3vw, 28px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* staggered rhythm from the reference: every second card sits lower */
+.card:nth-child(even) {
+  margin-top: clamp(28px, 7vw, 56px);
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0 clamp(20px, 2.4vw, 36px);
+  }
+
+  .card:nth-child(even) {
+    margin-top: clamp(64px, 7vw, 96px);
+  }
+}
+
+.figure {
+  margin: 0;
+}
+
+.frame {
+  position: relative;
+  aspect-ratio: 1;
+  border: 2.5px solid var(--c);
+  border-radius: 16px;
+  overflow: hidden;
+  background: #e9eef2;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img {
+  object-fit: cover;
+  object-position: 50% 28%;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .frame {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 28px -18px var(--c);
+}
+
+.card:hover .img {
+  transform: scale(1.04);
+}
+
+.title {
+  margin-top: 10px;
+  text-align: center;
+  font-style: italic;
+  font-weight: 600;
+  font-size: clamp(0.98rem, 1.6vw, 1.35rem);
+  line-height: 1.25;
+  color: var(--f100-ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .frame,
+  .img {
+    transition: none;
+  }
+
+  .card:hover .frame,
+  .card:hover .img {
+    transform: none;
+  }
+}
+
+/* ---------- Desktop: measured from the 1920px reference ---------- */
+@media (min-width: 1200px) {
+  .section {
+    padding-block: calc(78 * var(--u)) calc(92 * var(--u));
+  }
+
+  .head > header {
+    margin-bottom: calc(46 * var(--u));
+  }
+
+  .grid {
+    width: calc(1711 * var(--u));
+    max-width: 100%;
+    margin-inline: auto;
+    gap: 0 calc(37 * var(--u));
+  }
+
+  .card:nth-child(even) {
+    margin-top: calc(145 * var(--u));
+  }
+
+  .frame {
+    border-width: calc(4 * var(--u));
+    border-radius: calc(20 * var(--u));
+  }
+
+  .title {
+    margin-top: calc(10 * var(--u));
+    font-size: max(16px, calc(34 * var(--u)));
+  }
+
+  div.cta {
+    margin-top: calc(56 * var(--u));
+  }
+
+  .plane {
+    top: calc(21 * var(--u));
+    left: calc(55 * var(--u));
+    width: calc(210 * var(--u));
+  }
+
+  .bulb {
+    top: calc(97 * var(--u));
+    left: calc(1585 * var(--u));
+    right: auto;
+    width: calc(66 * var(--u));
+  }
+
+  .block {
+    display: block;
+    top: calc(204 * var(--u));
+    left: calc(613 * var(--u));
+    width: calc(82 * var(--u));
+  }
+
+  .rocket {
+    display: block;
+    top: calc(721 * var(--u));
+    left: calc(1081 * var(--u));
+    width: calc(74 * var(--u));
+  }
+}

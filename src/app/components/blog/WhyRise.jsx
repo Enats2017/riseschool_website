@@ -1,7 +1,19 @@
+"use client";
 import Image from "next/image";
 import { dinNext } from "@/app/fonts";
+import useNavAlignment from "@/app/hooks/useNavAlignment";
 
 export default function WhyRise() {
+  const { left, right, aligned } = useNavAlignment();
+
+  // On desktop (aligned === true) we pin the article's padding exactly to
+  // the nav's Home -> Blogs span via inline style. On mobile/tablet
+  // (aligned === false) we clear the inline style and let the Tailwind
+  // classes below (px-4 sm:px-6 md:px-10) handle responsive padding.
+  const articleStyle = aligned
+    ? { paddingLeft: left, paddingRight: right }
+    : undefined;
+
   return (
     <div className="overflow-x-hidden">
       <main data-bg-color="#fff">
@@ -45,11 +57,11 @@ export default function WhyRise() {
             <img src="/images/pattern-3.svg" alt="" style={{ width: "100%" }} />
           </div>
 
-          <div className="mx-auto max-w-2xl px-4 text-center text-white">
+          <div className="mx-auto max-w-5xl px-4 text-center text-white">
             <p
               className={`${dinNext.className} text-sm sm:text-base font-[700] uppercase tracking-[1px]`}
             >
-              Why RISE
+              Why RISING
             </p>
             <h1
               className={`${dinNext.className} mt-2 text-[32px] sm:text-[44px] font-[700]`}
@@ -60,8 +72,13 @@ export default function WhyRise() {
           </div>
         </section>
 
-        <article className="mx-auto max-w-2xl px-4 py-14 sm:py-20">
-          <div className="space-y-6 text-[17px] leading-relaxed text-neutral-800">
+        {/* Padding: exact nav-aligned inline style on desktop, responsive
+           Tailwind classes as the fallback on mobile/tablet */}
+        <article
+          className="px-4 sm:px-6 md:px-10 py-14 sm:py-20"
+          style={articleStyle}
+        >
+          <div className="space-y-6 text-[17px] leading-relaxed text-neutral-800 text-justify">
             <p>
               Every parent searching for the best school in Goa will realise
               that it&rsquo;s not an easy task to decide on the best school
@@ -96,13 +113,13 @@ export default function WhyRise() {
               grow up in
             </h2>
 
-            <div className="relative my-8 aspect-[4/3] w-full overflow-hidden rounded-lg bg-neutral-100">
+            <div className="relative my-8 aspect-[4/3] w-full max-w-[640px] mx-auto overflow-hidden rounded-lg bg-neutral-100">
               <Image
-                src="/images/blog/why-rise-hero.jpg"
+                src="/images/blog/why-rise-hero.png"
                 alt="Rising India School of Excellence campus building"
                 fill
                 priority
-                sizes="(min-width: 768px) 672px, 100vw"
+                sizes="(min-width: 768px) 640px, 100vw"
                 className="object-cover"
               />
             </div>
@@ -141,12 +158,12 @@ export default function WhyRise() {
               genuine curiosity that carries far beyond the classroom.
             </p>
 
-            <div className="relative my-8 aspect-[4/3] w-full overflow-hidden rounded-lg bg-neutral-100">
+            <div className="relative my-8 aspect-[4/3] w-full max-w-[640px] mx-auto overflow-hidden rounded-lg bg-neutral-100">
               <Image
-                src="/images/blog/why-rise-campus-walk.jpg"
+                src="/images/blog/why-rise-campus-walk.png"
                 alt="RISE students on a nature walk around campus"
                 fill
-                sizes="(min-width: 768px) 672px, 100vw"
+                sizes="(min-width: 768px) 640px, 100vw"
                 className="object-cover"
               />
             </div>
@@ -192,13 +209,13 @@ export default function WhyRise() {
               needs.
             </p>
 
-            <figure className="my-8">
+            <figure className="my-8 max-w-[640px] mx-auto">
               <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg bg-neutral-100">
                 <Image
-                  src="/images/blog/why-rise-nursery-harvest.jpg"
+                  src="/images/blog/why-rise-nursery-harvest.png"
                   alt="Nursery students at RISE learning about vegetables through hands-on harvesting"
                   fill
-                  sizes="(min-width: 768px) 672px, 100vw"
+                  sizes="(min-width: 768px) 640px, 100vw"
                   className="object-cover"
                 />
               </div>
@@ -219,13 +236,13 @@ export default function WhyRise() {
                   real-world problems, not just textbooks.
                 </p>
 
-                <figure className="my-6">
-                  <div className="relative aspect-[3/4] w-full max-w-sm mx-auto overflow-hidden rounded-lg bg-neutral-100">
+                <figure className="my-6 max-w-[640px] mx-auto">
+                  <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg bg-neutral-100">
                     <Image
-                      src="/images/blog/why-rise-gallery-walk.jpg"
+                      src="/images/blog/why-rise-gallery-walk.png"
                       alt="A RISE student presenting their art chart during a gallery walk activity"
                       fill
-                      sizes="(min-width: 640px) 384px, 100vw"
+                      sizes="(min-width: 768px) 640px, 100vw"
                       className="object-cover"
                     />
                   </div>
@@ -246,13 +263,13 @@ export default function WhyRise() {
                   moment they begin to learn.
                 </p>
 
-                <figure className="my-6">
-                  <div className="relative aspect-[3/4] w-full max-w-sm mx-auto overflow-hidden rounded-lg bg-neutral-100">
+                <figure className="my-6 max-w-[640px] mx-auto">
+                  <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg bg-neutral-100">
                     <Image
-                      src="/images/blog/why-rise-classroom-share.jpg"
+                      src="/images/blog/why-rise-classroom-share.png"
                       alt="A RISE student sharing his thoughts during a classroom activity"
                       fill
-                      sizes="(min-width: 640px) 384px, 100vw"
+                      sizes="(min-width: 768px) 640px, 100vw"
                       className="object-cover"
                     />
                   </div>
@@ -273,12 +290,12 @@ export default function WhyRise() {
                   with integrity.
                 </p>
 
-                <div className="relative my-6 aspect-[4/3] w-full overflow-hidden rounded-lg bg-neutral-100">
+                <div className="relative my-6 aspect-[4/3] w-full max-w-[640px] mx-auto overflow-hidden rounded-lg bg-neutral-100">
                   <Image
-                    src="/images/blog/why-rise-science-activity.jpg"
+                    src="/images/blog/why-rise-science-activity.png"
                     alt="RISE students working through a hands-on science activity"
                     fill
-                    sizes="(min-width: 768px) 672px, 100vw"
+                    sizes="(min-width: 768px) 640px, 100vw"
                     className="object-cover"
                   />
                 </div>
@@ -332,12 +349,12 @@ export default function WhyRise() {
               love to pursue and grow in.
             </p>
 
-            <div className="relative my-8 aspect-[4/3] w-full overflow-hidden rounded-lg bg-neutral-100">
+            <div className="relative my-8 aspect-[4/3] w-full max-w-[640px] mx-auto overflow-hidden rounded-lg bg-neutral-100">
               <Image
                 src="/images/blog/why-rise-creator-hour.jpg"
                 alt="RISE students playing guitar and keyboard during Creator Hour"
                 fill
-                sizes="(min-width: 768px) 672px, 100vw"
+                sizes="(min-width: 768px) 640px, 100vw"
                 className="object-cover"
               />
             </div>
@@ -396,12 +413,12 @@ export default function WhyRise() {
               throughout your child&rsquo;s education.
             </p>
 
-            <div className="relative my-8 aspect-[4/3] w-full overflow-hidden rounded-lg bg-neutral-100">
+            <div className="relative my-8 aspect-[4/3] w-full max-w-[640px] mx-auto overflow-hidden rounded-lg bg-neutral-100">
               <Image
-                src="/images/blog/why-rise-signage.jpg"
+                src="/images/blog/why-rise-signage.png"
                 alt="Rising India School of Excellence entrance signage"
                 fill
-                sizes="(min-width: 768px) 672px, 100vw"
+                sizes="(min-width: 768px) 640px, 100vw"
                 className="object-cover"
               />
             </div>

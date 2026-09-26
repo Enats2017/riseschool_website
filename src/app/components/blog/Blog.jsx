@@ -1,11 +1,18 @@
+"use client";
 import Image from "next/image";
 import { dinNext } from "@/app/fonts";
+import useNavAlignment from "@/app/hooks/useNavAlignment";
 
 export default function Blog() {
+  const { left, right, aligned } = useNavAlignment();
+
+  const articleStyle = aligned
+    ? { paddingLeft: left, paddingRight: right }
+    : undefined;
+
   return (
     <div className="overflow-x-hidden">
       <main data-bg-color="#fff">
-        {/* Brand hero band, matches the site's Hero pattern */}
         <section
           style={{
             background:
@@ -60,19 +67,22 @@ export default function Blog() {
           </div>
         </section>
 
-        <article className="mx-auto max-w-2xl px-4 py-14 sm:py-20">
-          <div className="relative mb-10 aspect-[4/3] w-full overflow-hidden rounded-lg bg-neutral-100">
+        <article
+          className="px-4 sm:px-6 md:px-10 py-14 sm:py-20"
+          style={articleStyle}
+        >
+          <div className="relative mb-10 aspect-[4/3] w-full max-w-[640px] mx-auto overflow-hidden rounded-lg bg-neutral-100">
             <Image
-              src="/images/blog/pyp-hero.jpg"
+              src="/images/blog/pyp-hero.png"
               alt="PYP students exploring during a gallery walk"
               fill
               priority
-              sizes="(min-width: 768px) 672px, 100vw"
+              sizes="(min-width: 768px) 640px, 100vw"
               className="object-cover"
             />
           </div>
 
-          <div className="space-y-6 text-[17px] leading-relaxed text-neutral-800">
+          <div className="space-y-6 text-[17px] leading-relaxed text-neutral-800 text-justify">
             <p>
               Most parents start analysing their child&rsquo;s academic
               progress around grade 9 or 10. That&rsquo;s when it feels
@@ -119,12 +129,12 @@ export default function Blog() {
               of plastic.
             </p>
 
-            <div className="relative my-8 aspect-[3/4] w-full max-w-sm mx-auto overflow-hidden rounded-lg bg-neutral-100">
+            <div className="relative my-8 aspect-[4/3] w-full max-w-[640px] mx-auto overflow-hidden rounded-lg bg-neutral-100">
               <Image
-                src="/images/blog/pyp-inquiry-unit.jpg"
+                src="/images/blog/pyp-inquiry-unit.png"
                 alt="A child working through a hands-on PYP inquiry unit"
                 fill
-                sizes="(min-width: 640px) 384px, 100vw"
+                sizes="(min-width: 768px) 640px, 100vw"
                 className="object-cover"
               />
             </div>
@@ -152,12 +162,12 @@ export default function Blog() {
               creatively, and differently than most of them.
             </p>
 
-            <div className="relative my-8 aspect-[4/3] w-full overflow-hidden rounded-lg bg-neutral-100">
+            <div className="relative my-8 aspect-[4/3] w-full max-w-[640px] mx-auto overflow-hidden rounded-lg bg-neutral-100">
               <Image
                 src="/images/blog/pyp-gallery-walk.jpg"
                 alt="Students presenting their work during a PYP gallery walk"
                 fill
-                sizes="(min-width: 768px) 672px, 100vw"
+                sizes="(min-width: 768px) 640px, 100vw"
                 className="object-cover"
               />
             </div>
@@ -197,12 +207,12 @@ export default function Blog() {
               you.
             </p>
 
-            <div className="relative my-8 aspect-[4/3] w-full overflow-hidden rounded-lg bg-neutral-100">
+            <div className="relative my-8 aspect-[4/3] w-full max-w-[640px] mx-auto overflow-hidden rounded-lg bg-neutral-100">
               <Image
-                src="/images/blog/pyp-classroom.jpg"
+                src="/images/blog/pyp-c.png"
                 alt="A PYP classroom set up for open-ended, hands-on learning"
                 fill
-                sizes="(min-width: 768px) 672px, 100vw"
+                sizes="(min-width: 768px) 640px, 100vw"
                 className="object-cover"
               />
             </div>
@@ -231,12 +241,12 @@ export default function Blog() {
               practice.
             </p>
 
-            <div className="relative my-8 aspect-[8/5] w-full overflow-hidden rounded-lg bg-neutral-100">
+            <div className="relative my-8 aspect-[8/5] w-full max-w-[640px] mx-auto overflow-hidden rounded-lg bg-neutral-100">
               <Image
-                src="/images/blog/pyp-community.jpg"
+                src="/images/blog/pyp-community.png"
                 alt="Parents and students engaging with the PYP community at RISE"
                 fill
-                sizes="(min-width: 768px) 672px, 100vw"
+                sizes="(min-width: 768px) 640px, 100vw"
                 className="object-cover"
               />
             </div>

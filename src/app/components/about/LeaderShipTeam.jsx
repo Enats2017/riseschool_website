@@ -204,6 +204,31 @@ const teams = [
         quote:
             "Lead with empathy, nurture talent, and create an environment where every individual feels valued, motivated, and inspired to excel.",
     },
+       {
+        title: "Education Director",
+        name: "Ms. Zeenat Bandukwala",
+        img: "/images/leadership_team/zeenat_bandukwala.jpeg",
+        summary:
+            "With over a decade of experience spanning grassroots education, teacher leadership, and ed-tech innovation...",
+        content: (
+            <>
+                <p>
+                    In 2010, she joined the Teach for India Fellowship, teaching in Malwani, one of Mumbai's largest low-income communities. It was here that she confronted the stark realities of educational inequity, and realised that true impact required more than good intentions; it demanded a rigorous understanding of teaching, training, and systems-level change.
+                </p>
+                <p>
+                    This realisation propelled her into leadership roles at Teach for India, where she went on to guide and train cohorts of Fellows, before taking on responsibility for curriculum, training, and impact tracking for over 7,000 students and 200 Fellows across Mumbai. Her work during this period laid the foundation for her belief that excellent education is built not on isolated interventions, but on strong systems and well-equipped educators.
+                </p>
+                <p>
+                    Never one to stay confined to convention, Ms. Bandukwala took a sabbatical in 2019 to return to grassroots work — designing curriculum to help autistic adults secure and sustain employment, while also consulting with social impact entrepreneurs through an incubator. In 2020, she stepped into academic leadership at an ed-tech organisation, driven by the belief that technology offers the most scalable path to reaching every child with the education they deserve.
+                </p>
+                <p>
+                    Today, at Rising India School of Excellence -- The School of Tomorrow, Ms. Bandukwala brings this rare blend of grassroots empathy, systems thinking, and innovation to shaping academic outcomes that are both rigorous and deeply human.
+                </p>
+            </>
+        ),
+        quote:
+            "Real education isn't about who has access — it's about making sure everyone does. Every child deserves a teacher who is equipped, a system that believes in them, and an environment that helps them thrive.",
+    },
     // {
     //     title: "Founder – White Canvas India",
     //     name: "Samaresh Shah",

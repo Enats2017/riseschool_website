@@ -1,8 +1,14 @@
 // components/StickyAdmissionButton.jsx
 "use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const StickyAdmissionButton = () => {
+    const pathname = usePathname();
+
+    // Hide on the Future 100 page
+    if (pathname === "/future-100" || pathname === "/future-100/") return null;
+
     return (
         <Link href="/admissions">
             <button 

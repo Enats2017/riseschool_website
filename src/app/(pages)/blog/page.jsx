@@ -6,17 +6,17 @@ import { dinNext } from "@/app/fonts";
 const posts = [
   {
     slug: "why-rise",
-    title: "Why RISE: What Makes This the Right IB School for Your Child in Goa",
+    title: "Why Rising: What Makes This the Right IB School for Your Child in Goa",
     excerpt:
-      "An honest look at what sets Rising India School of Excellence apart \u2014 the IB curriculum, our 4D learning model, and why it might be the right fit for your child.",
+      "An honest look at what sets Rising India School of Excellence apart — the IB curriculum, our 4D learning model, and why it might be the right fit for your child.",
     image: "/images/blog/why-rise-hero.jpg",
   },
   {
     slug: "pyp-programme",
     title: "The years that actually shape how a child thinks",
     excerpt:
-      "Why the Primary Years Programme matters more than most parents realise \u2014 and how it shapes independent, curious thinkers from the very start.",
-    image: "/images/blog/pyp-hero.jpg",
+      "Why the Primary Years Programme matters more than most parents realise — and how it shapes independent, curious thinkers from the very start.",
+    image: "/images/blog/pyp-hero.png",
   },
 ];
 
@@ -25,14 +25,14 @@ export default function BlogPage() {
     <div className="overflow-x-hidden">
       <main data-bg-color="#fff">
         {/* Brand hero band */}
-        <section
+             <section
           style={{
             background:
-              "radial-gradient(circle, rgb(189 180 180) 0%, #831719 70%)",
+              "radial-gradient(circle, rgb(189 180 180) 0%, #831719 100%)",
             position: "relative",
             overflow: "hidden",
-            paddingTop: "120px",
-            paddingBottom: "64px",
+            paddingTop: "0px",
+            paddingBottom: "60px",
           }}
         >
           <div
@@ -64,18 +64,86 @@ export default function BlogPage() {
             <img src="/images/pattern-3.svg" alt="" style={{ width: "100%" }} />
           </div>
 
-          <div className="mx-auto max-w-4xl px-4 text-center text-white">
-            <p
-              className={`${dinNext.className} text-sm sm:text-base font-[700] uppercase tracking-[1px]`}
-            >
-              RISE Blog
-            </p>
-            <h1
-              className={`${dinNext.className} mt-2 text-[40px] sm:text-[56px] font-[700]`}
-              style={{ lineHeight: 1.1 }}
-            >
-              Blogs
-            </h1>
+          {/* Content */}
+          <div
+            style={{
+              width: "100%",
+              maxWidth: "1520px",
+              margin: "0 auto",
+            }}
+          >
+            <div className="flex flex-col lg:flex-row items-center lg:items-stretch flex-wrap">
+              
+              {/* Left Image Section */}
+              <div className="lg:w-7/12 w-full relative flex justify-center items-start lg:justify-end lg:pr-10">
+                <img
+                  src="/images/blog_banner_img.png"
+                  alt="blog banner"
+                  style={{ 
+                    width: "100%", 
+                    maxWidth: "1000px", 
+                    height: "auto",
+                    display: "block",
+                  }}
+                  className="mx-auto"
+                />
+                
+                <h3
+                  className="
+                    absolute 
+                    bottom-[10%] 
+                    left-0
+                    flex 
+                    justify-start 
+                    w-full 
+                    text-white 
+                    uppercase 
+                    text-left 
+                    transform 
+                    lg:-translate-y-4
+                    z-10
+                  "
+                >
+                  <strong
+                    className={`${dinNext.className} text-[62px] xs:text-[92px] sm:text-[132px] md:text-[112px]  xl:text-[160px] font-[700] pl-2  md:pl-6 lg:pl-8`}
+                    style={{
+                      lineHeight: 1,
+                    }}
+                  >
+                    BLOGS
+                  </strong>
+                </h3>
+              </div>
+
+              {/* Right Text Section */}
+              {/* Right Text Section */}
+              {/* Right Text Section */}
+              <div className="lg:w-5/12 w-full text-white lg:pl-20 xl:pl-24 px-4 z-20 text-left lg:text-left pr-0 md:pr-0 flex flex-col justify-start pt-[90px]">
+                <h2
+                  className={`${dinNext.className} font-[400] text-[24px] md:text-[28px] lg:text-[36px] leading-[1.3] uppercase tracking-[1px]`}
+                >
+                  IDEAS THAT SHAPE TOMORROW
+                </h2>
+                <h3
+                  className={`${dinNext.className} font-[400] text-[18px] md:text-[20px] lg:text-[22px] mt-2 uppercase tracking-[1px] opacity-90`}
+                >
+                  INSIGHTS BEYOND THE CLASSROOM
+                </h3>
+
+                <div className="text-[17px] mt-6 space-y-4" style={{ color: "white", lineHeight: "30px", marginRight: "0px" }}>
+                  <p>
+                    Education is evolving, and so are the ideas that shape how children learn, think, and grow. Through the Rising India School of Excellence Blog, explore perspectives on future-ready learning, technology, innovation, creativity, leadership, parenting, and student experiences.
+                  </p>
+                  <p>
+                    You’ll discover how learning comes alive through real-world experiences, collaboration, curiosity, and purposeful exploration — helping students build the skills and mindset they need for an ever-changing world.
+                  </p>
+                  <p>
+                    Because education is not just about learning for today.<br />
+                    It’s about preparing young minds to imagine, create, and shape tomorrow.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -88,7 +156,6 @@ export default function BlogPage() {
               "linear-gradient(180deg, #e7bcb1 0%, #f4dbd7 45%, #ebd3d3 100%)",
           }}
         >
-          {/* soft decorative blur, echoes the hero's shape-blur asset */}
           <div
             style={{
               position: "absolute",
@@ -132,11 +199,6 @@ export default function BlogPage() {
                       sizes="(min-width: 640px) 50vw, 100vw"
                       className="object-cover transition duration-300 group-hover:scale-105"
                     />
-                    <span
-                      className={`${dinNext.className} absolute left-4 top-4 rounded-full bg-[#831719] px-3 py-1 text-xs font-[700] uppercase tracking-wide text-white`}
-                    >
-                      RISE Blog
-                    </span>
                   </div>
                   <div className="p-5">
                     <h2 className="text-lg font-semibold leading-snug text-neutral-900">

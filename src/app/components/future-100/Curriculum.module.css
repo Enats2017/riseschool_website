@@ -1,0 +1,254 @@
+.section {
+  position: relative;
+  padding-block: var(--f100-section-y);
+}
+
+/* ---------- Word mark (phones & tablets) ---------- */
+
+.word {
+  display: flex;
+  justify-content: center;
+  gap: clamp(2px, 1vw, 8px);
+  margin-bottom: clamp(24px, 5vw, 40px);
+}
+
+.wordLetter {
+  display: grid;
+  place-items: center;
+  width: clamp(28px, 8.6vw, 58px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--c);
+  color: #fff;
+  font-weight: 800;
+  font-size: clamp(0.95rem, 4.2vw, 1.8rem);
+  line-height: 1;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.3);
+}
+
+/* ---------- Domains ---------- */
+
+.domains {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 560px) {
+  .domains {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 820px) {
+  .domains {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.domain {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 14px;
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid color-mix(in srgb, var(--c) 25%, transparent);
+  box-shadow: 0 8px 20px -16px rgba(0, 0, 0, 0.4);
+}
+
+.circle {
+  position: relative;
+  flex: none;
+  display: block;
+  width: 66px;
+  aspect-ratio: 1;
+}
+
+.circleSvg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.label {
+  min-width: 0;
+}
+
+.arrow {
+  display: none;
+}
+
+.domainTitle {
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.25;
+  color: var(--f100-maroon);
+}
+
+.domainText {
+  margin-top: 3px;
+  font-size: 0.92rem;
+  line-height: 1.4;
+  color: #2a2a2a;
+}
+
+/* ---------- Tablet landscape & desktop: one row, labels alternating ---------- */
+
+@media (min-width: 1024px) {
+  .word {
+    display: none;
+  }
+
+  .domains {
+    grid-template-columns: repeat(9, minmax(0, 1fr));
+    gap: 0;
+  }
+
+  .domain {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: 78px auto 78px;
+    justify-items: center;
+    gap: 16px;
+    padding: 0;
+    background: none;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    text-align: center;
+  }
+
+  .circle {
+    grid-row: 2;
+    width: min(100%, 106px);
+  }
+
+  .label {
+    position: relative;
+    width: max-content;
+    max-width: 150px;
+  }
+
+  .domain:first-child .label {
+    justify-self: start;
+  }
+
+  .domain:last-child .label {
+    justify-self: end;
+  }
+
+  .domain[data-pos="top"] .label {
+    grid-row: 1;
+    align-self: end;
+  }
+
+  .domain[data-pos="bottom"] .label {
+    grid-row: 3;
+    align-self: start;
+  }
+
+  .arrow {
+    display: block;
+    position: absolute;
+    left: -24%;
+    width: 32%;
+    height: auto;
+    color: #81142c;
+  }
+
+  .domain[data-pos="top"] .arrow {
+    top: -30%;
+  }
+
+  .domain[data-pos="bottom"] .arrow {
+    bottom: -30%;
+    transform: scaleY(-1);
+  }
+
+  .domainTitle {
+    font-weight: 600;
+    font-size: 0.74rem;
+    line-height: 1.22;
+  }
+
+  .domainTitle::after {
+    content: ":";
+  }
+
+  .domainText {
+    white-space: pre-line;
+    margin-top: 0;
+    font-weight: 600;
+    font-size: 0.72rem;
+    line-height: 1.22;
+    color: #111;
+  }
+}
+
+/* ---------- Desktop: measured from the 1920px reference ---------- */
+
+@media (min-width: 1200px) {
+  .section {
+    padding-block: calc(50 * var(--u)) calc(84 * var(--u));
+  }
+
+  .domains {
+    width: calc(1746 * var(--u));
+    max-width: 100%;
+    margin: calc(66 * var(--u)) auto 0;
+  }
+
+  .domain {
+    grid-template-rows: calc(71 * var(--u)) auto calc(71 * var(--u));
+    gap: calc(22 * var(--u));
+  }
+
+  .circle {
+    width: calc(184 * var(--u));
+    max-width: none;
+    margin-block: calc(-18 * var(--u));
+  }
+
+  .arrow {
+    left: -30%;
+    width: 27%;
+  }
+
+  .domain[data-pos="top"] .arrow {
+    top: -14%;
+  }
+
+  .domain[data-pos="bottom"] .arrow {
+    bottom: -14%;
+  }
+
+  .label,
+  .domain:first-child .label,
+  .domain:last-child .label {
+    justify-self: center;
+    max-width: calc(262 * var(--u));
+  }
+
+  .domainTitle {
+    font-size: max(11px, calc(18 * var(--u)));
+  }
+
+  .domainText {
+    font-size: max(11px, calc(18 * var(--u)));
+  }
+
+  div.cta {
+    margin-top: calc(59 * var(--u));
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+  div.cta {
+    margin-top: 44px;
+  }
+}

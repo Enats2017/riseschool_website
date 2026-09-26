@@ -23,6 +23,16 @@ const linksData = [
 
 export default function Navbar() {
   const pathname = usePathname();
+
+  // Hide navbar on the Future 100 page
+  if (pathname === "/future-100" || pathname === "/future-100/") {
+    return null;
+  }
+
+  return <NavbarContent />;
+}
+
+function NavbarContent() {
   const navRef = useRef(null);
   const linksRef = useRef([]);
   const logoRef = useRef(null);
@@ -73,20 +83,12 @@ export default function Navbar() {
     const handleScroll = () => {
       const scrollY = window.scrollY;
 
-      // console.log("navbar called")
-      // console.log(`${scrollY} - ${hasAppeared.current}`)
-
       if (scrollY > 60 && !hasAppeared.current) {
-
-
         animateToWhite()
         hasAppeared.current = true;
       } else if (scrollY <= 60 && hasAppeared.current) {
-
-
         hasAppeared.current = false;
         animteToTransparent()
-
       }
     };
 
@@ -100,20 +102,16 @@ export default function Navbar() {
 
   useEffect(() => {
     if (isOpen) {
-      // Disable scrolling
       document.body.style.overflow = "hidden";
     } else {
-      // Enable scrolling
       document.body.style.overflow = "";
     }
 
-    // Cleanup when component unmounts
     return () => {
       document.body.style.overflow = "";
     };
   }, [isOpen]);
 
-  // Toggle mobile menu
   const toggleMenu = () => {
     setIsOpen(prev => !prev);
 
@@ -154,6 +152,7 @@ export default function Navbar() {
                   key={i}
                   href={linkObj.linkUrl}
                   ref={el => (linksRef.current[i] = el)}
+                  id={i === 0 ? "nav-home-link" : i === linksData.length - 1 ? "nav-last-link" : undefined}
                   className="transition-colors duration-500 uppercase text-[13px] xl:text-[14px] font-[500] whitespace-nowrap"
                   style={{ color: "#ffffff" }}
                 >
@@ -162,7 +161,6 @@ export default function Navbar() {
               ))}
             </div>
           </div>
-          {/* <Link href="#"> */}
           <button
             onClick={openModal}
             ref={buttonRef}
@@ -171,25 +169,20 @@ export default function Navbar() {
           >
             School Tour
           </button>
-          {/* </Link> */}
         </div>
 
         {/* Mobile Hamburger */}
-
-
         <div className="lg:hidden flex items-center">
           <button
             onClick={toggleMenu}
             className="flex flex-col gap-1 w-10 p-2 md:w-16 md:gap-2"
             onMouseEnter={() => {
-              // Top line animation (fast)
               gsap.fromTo(
                 hamburgerRef.current[0],
                 { scaleX: 1, transformOrigin: "right" },
                 { scaleX: 0, duration: 0.25, transformOrigin: "right", yoyo: true, repeat: 1, ease: "power1.inOut" }
               );
 
-              // Bottom line animation (slower)
               gsap.fromTo(
                 hamburgerRef.current[1],
                 { scaleX: 1, transformOrigin: "right" },
@@ -207,19 +200,6 @@ export default function Navbar() {
             ></span>
           </button>
         </div>
-
-
-        {/* {pathname === "/" && (
-          <div className="absolute left-0 top-full w-full bg-[#F5C400] text-[#831719] text-center text-[12px] md:text-[20px] py-1 md:py-2 px-2">
-            <span className="font-bold block md:inline">
-              Launches Inaugural First Family Scholarship Upto 1 lac
-            </span>
-            <span className="hidden md:inline"> | </span>
-            <span className="font-semibold block md:inline">
-              Admissions Open | Limited Seats Only
-            </span>
-          </div>
-        )} */}
       </nav>
 
       {/* Mobile Slide-in Menu */}
@@ -229,8 +209,6 @@ export default function Navbar() {
       >
 
         <div className="flex justify-between items-center">
-
-          {/* Logo */}
           <Link href="/">
             <Image
               src="/images/logo.png"
@@ -243,20 +221,17 @@ export default function Navbar() {
 
           <div className="lg:hidden flex items-center">
             <button onClick={toggleMenu} className="flex items-center justify-center p-2 transition-transform duration-300 hover:rotate-90">
-              <X size={36} /> {/* Now the icon will render at 50px */}
+              <X size={36} />
             </button>
           </div>
-
         </div>
 
         <div className="flex flex-col">
-
           {linksData.map((linkObj, i) => (
             <Link key={i} href={linkObj.linkUrl} className="text-lg font-semibold py-4 border-b-1 border-red-400 uppercase text-[18px]" onClick={toggleMenu}>
               {linkObj.linkText}
             </Link>
           ))}
-          {/* <Link href="/apply"> */}
           <button
             onClick={() => {
               openModal();
@@ -266,10 +241,8 @@ export default function Navbar() {
           >
             School Tour
           </button>
-          {/* </Link> */}
         </div>
       </div>
-      {/* Enquiry Modal */}
       <EnquiryModal isOpen={isModalOpen} onClose={closeModal} />
     </>
   );
