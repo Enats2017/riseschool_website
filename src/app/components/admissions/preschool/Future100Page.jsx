@@ -1,5 +1,6 @@
 import { Boogaloo } from "next/font/google";
 import ui from "./shared.module.css";
+import TopBar from "./TopBar";
 import AnnouncementBar from "./AnnouncementBar";
 import HeroSection from "./HeroSection";
 import IntroSection from "./IntroSection";
@@ -23,6 +24,7 @@ const boogaloo = Boogaloo({
 export default function Future100Page() {
   return (
     <main className={`${ui.page} ${boogaloo.variable}`}>
+      <TopBar />
       <AnnouncementBar />
       <HeroSection />
       <IntroSection />

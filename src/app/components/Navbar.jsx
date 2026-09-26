@@ -24,8 +24,8 @@ const linksData = [
 export default function Navbar() {
   const pathname = usePathname();
 
-  // Hide navbar on the Future 100 page
-  if (pathname === "/future-100" || pathname === "/future-100/") {
+  // Hide navbar on the Future 100 (Admissions Preschool) page
+  if (pathname === "/admissions/preschool" || pathname === "/admissions/preschool/") {
     return null;
   }
 

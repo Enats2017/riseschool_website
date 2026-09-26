@@ -1,4 +1,4 @@
-import Future100Page from "@/app/components/future-100/Future100Page";
+import Future100Page from "@/app/components/admissions/preschool/Future100Page";
 
 export const metadata = {
   title: "Future 100 – Toddler to Sr KG | Rising India School of Excellence",
