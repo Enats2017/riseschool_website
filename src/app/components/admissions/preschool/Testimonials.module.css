@@ -158,3 +158,72 @@
     margin-top: calc(52 * var(--u));
   }
 }
+
+/* ---------- Mobile (< 640px): one card in view, swipe for the others ---------- */
+@media (max-width: 639px) {
+  .section {
+    padding-block: calc(52 * var(--mu)) calc(60 * var(--mu));
+  }
+
+  .head > header {
+    margin-bottom: calc(72 * var(--mu));
+  }
+
+  .grid {
+    display: flex;
+    gap: 0;
+    width: calc(554 * var(--mu));
+    max-width: none;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .card {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    border-radius: calc(16 * var(--mu));
+  }
+
+  .figure {
+    padding: calc(38 * var(--mu)) calc(38 * var(--mu)) calc(46 * var(--mu));
+  }
+
+  .mark {
+    width: calc(58 * var(--mu));
+    margin-bottom: calc(22 * var(--mu));
+  }
+
+  .quote {
+    font-size: max(13px, calc(25 * var(--mu)));
+    line-height: 1.55;
+  }
+
+  .author {
+    justify-content: center;
+    gap: calc(22 * var(--mu));
+    padding-top: calc(44 * var(--mu));
+  }
+
+  .avatar {
+    width: max(40px, calc(90 * var(--mu)));
+    height: max(40px, calc(90 * var(--mu)));
+  }
+
+  .name {
+    font-size: max(14px, calc(27 * var(--mu)));
+  }
+
+  .grade {
+    font-size: max(12px, calc(22 * var(--mu)));
+  }
+
+  div.cta {
+    margin-top: calc(66 * var(--mu));
+  }
+}

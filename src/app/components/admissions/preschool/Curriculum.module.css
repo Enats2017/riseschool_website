@@ -3,29 +3,6 @@
   padding-block: var(--f100-section-y);
 }
 
-/* ---------- Word mark (phones & tablets) ---------- */
-
-.word {
-  display: flex;
-  justify-content: center;
-  gap: clamp(2px, 1vw, 8px);
-  margin-bottom: clamp(24px, 5vw, 40px);
-}
-
-.wordLetter {
-  display: grid;
-  place-items: center;
-  width: clamp(28px, 8.6vw, 58px);
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: var(--c);
-  color: #fff;
-  font-weight: 800;
-  font-size: clamp(0.95rem, 4.2vw, 1.8rem);
-  line-height: 1;
-  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.3);
-}
-
 /* ---------- Domains ---------- */
 
 .domains {
@@ -100,10 +77,6 @@
 /* ---------- Tablet landscape & desktop: one row, labels alternating ---------- */
 
 @media (min-width: 1024px) {
-  .word {
-    display: none;
-  }
-
   .domains {
     grid-template-columns: repeat(9, minmax(0, 1fr));
     gap: 0;
@@ -250,5 +223,129 @@
 @media (min-width: 1024px) and (max-width: 1199px) {
   div.cta {
     margin-top: 44px;
+  }
+}
+
+.deco,
+.harrow {
+  display: none;
+}
+
+/* ---------- Mobile (< 640px): single zig-zag column, labels alternate sides ---------- */
+@media (max-width: 639px) {
+  .section {
+    padding-block: calc(72 * var(--mu)) calc(68 * var(--mu));
+  }
+
+  .section header {
+    position: relative;
+    margin-bottom: calc(50 * var(--mu));
+  }
+
+  .deco {
+    display: block;
+    position: absolute;
+    height: auto;
+    pointer-events: none;
+  }
+
+  .decoAb {
+    left: calc(29 * var(--mu));
+    top: calc(-14 * var(--mu));
+    width: calc(54 * var(--mu));
+  }
+
+  .decoRocket {
+    right: calc(36 * var(--mu));
+    top: calc(76 * var(--mu));
+    width: calc(46 * var(--mu));
+  }
+
+  .domains {
+    grid-template-columns: minmax(0, 1fr);
+    gap: calc(28 * var(--mu));
+  }
+
+  .domain {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) calc(135 * var(--mu)) minmax(0, 1fr);
+    align-items: center;
+    gap: 0;
+    padding: 0;
+    background: none;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .circle {
+    grid-column: 2;
+    grid-row: 1;
+    width: calc(135 * var(--mu));
+  }
+
+  .domain:nth-child(odd) .circle {
+    left: calc(8 * var(--mu));
+  }
+
+  .domain:nth-child(even) .circle {
+    left: calc(-10 * var(--mu));
+  }
+
+  .label {
+    grid-row: 1;
+    justify-self: center;
+    max-width: calc(230 * var(--mu));
+    text-align: center;
+  }
+
+  .domain[data-pos="top"] .label {
+    grid-column: 3;
+    transform: translateY(calc(-30 * var(--mu)));
+  }
+
+  .domain[data-pos="bottom"] .label {
+    grid-column: 1;
+  }
+
+  .domainTitle,
+  .domainText {
+    display: inline;
+    font-size: max(11px, calc(22 * var(--mu)));
+    font-weight: 600;
+    line-height: 1.25;
+  }
+
+  .domainTitle::after {
+    content: ": ";
+  }
+
+  .domainText {
+    color: #111;
+  }
+
+  .harrow {
+    display: block;
+    position: absolute;
+    height: auto;
+    color: #81142c;
+    pointer-events: none;
+  }
+
+  .domain[data-pos="top"] .harrow {
+    left: calc(90 * var(--mu));
+    top: calc(-40 * var(--mu));
+    width: calc(95 * var(--mu));
+  }
+
+  .domain[data-pos="bottom"] .harrow {
+    left: calc(-54 * var(--mu));
+    top: calc(-23 * var(--mu));
+    width: calc(90 * var(--mu));
+    transform: scaleX(-1);
+  }
+
+  div.cta {
+    margin-top: calc(100 * var(--mu));
   }
 }

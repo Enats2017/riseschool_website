@@ -8,9 +8,9 @@ import { AGE_OPTIONS, FORM_ID, LOCATION_OPTIONS } from "./data";
 // Same endpoint as the site's Contact page. Set NEXT_PUBLIC_FUTURE100_API to route
 // Future 100 enquiries elsewhere.
 const ENQUIRY_API =
-  process.env.NEXT_PUBLIC_FUTURE100_API ||
-  process.env.NEXT_PUBLIC_CONTACT_API ||
-  "https://riseschool.in/contact.php";
+  process.env.NEXT_PUBLIC_FUTURE_100_API || "https://riseschool.in/preschoolAdmission.php";
+   //process.env.NEXT_PUBLIC_FUTURE_100_API || "http://localhost/riseschool_website/preschoolAdmission.php";
+
 
 const EMPTY = {
   childName: "",
@@ -169,7 +169,7 @@ export default function EnquiryForm() {
           autoComplete: "tel",
           maxLength: 16,
         })}
-        {textField("parentEmail", "Parent email", { type: "email", autoComplete: "email" })}
+        {textField("parentEmail", "Parent Email", { type: "email", autoComplete: "email" })}
         {selectField("location", "Residential location", LOCATION_OPTIONS, "Select location")}
       </div>
 

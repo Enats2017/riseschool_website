@@ -25,14 +25,14 @@ export default function BlogPage() {
     <div className="overflow-x-hidden">
       <main data-bg-color="#fff">
         {/* Brand hero band */}
-             <section
+        <section
           style={{
             background:
               "radial-gradient(circle, rgb(189 180 180) 0%, #831719 100%)",
             position: "relative",
             overflow: "hidden",
-            paddingTop: "0px",
-            paddingBottom: "60px",
+            paddingTop: "120px", // was 0px — clears the fixed header
+            paddingBottom: "0px", // was 60px — more red below the image
           }}
         >
           <div
@@ -73,39 +73,38 @@ export default function BlogPage() {
             }}
           >
             <div className="flex flex-col lg:flex-row items-center lg:items-stretch flex-wrap">
-              
               {/* Left Image Section */}
               <div className="lg:w-7/12 w-full relative flex justify-center items-start lg:justify-end lg:pr-10">
                 <img
-                  src="/images/blog_banner_img.png"
+                  src="/images/blog_banner_new.png"
                   alt="blog banner"
-                  style={{ 
-                    width: "100%", 
-                    maxWidth: "1000px", 
+                  style={{
+                    width: "100%",
+                    maxWidth: "1000px",
                     height: "auto",
                     display: "block",
                   }}
                   className="mx-auto"
                 />
-                
+
                 <h3
                   className="
-                    absolute 
-                    bottom-[10%] 
+                    absolute
+                    bottom-[10%]
                     left-0
-                    flex 
-                    justify-start 
-                    w-full 
-                    text-white 
-                    uppercase 
-                    text-left 
-                    transform 
+                    flex
+                    justify-start
+                    w-full
+                    text-white
+                    uppercase
+                    text-left
+                    transform
                     lg:-translate-y-4
                     z-10
                   "
                 >
                   <strong
-                    className={`${dinNext.className} text-[62px] xs:text-[92px] sm:text-[132px] md:text-[112px]  xl:text-[160px] font-[700] pl-2  md:pl-6 lg:pl-8`}
+                    className={`${dinNext.className} text-[62px] xs:text-[92px] sm:text-[132px] md:text-[112px] xl:text-[160px] font-[700] pl-2 md:pl-6 lg:pl-8`}
                     style={{
                       lineHeight: 1,
                     }}
@@ -116,9 +115,8 @@ export default function BlogPage() {
               </div>
 
               {/* Right Text Section */}
-              {/* Right Text Section */}
-              {/* Right Text Section */}
-              <div className="lg:w-5/12 w-full text-white lg:pl-20 xl:pl-24 px-4 z-20 text-left lg:text-left pr-0 md:pr-0 flex flex-col justify-start pt-[90px]">
+              <div className="lg:w-5/12 w-full text-white lg:pl-20 xl:pl-24 px-4 z-20 text-left pr-0 flex flex-col justify-start pt-[20px]">
+                {/* pt was 90px — the section's top padding now provides the spacing */}
                 <h2
                   className={`${dinNext.className} font-[400] text-[24px] md:text-[28px] lg:text-[36px] leading-[1.3] uppercase tracking-[1px]`}
                 >
@@ -130,16 +128,28 @@ export default function BlogPage() {
                   INSIGHTS BEYOND THE CLASSROOM
                 </h3>
 
-                <div className="text-[17px] mt-6 space-y-4" style={{ color: "white", lineHeight: "30px", marginRight: "0px" }}>
+                <div
+                  className="text-[17px] mt-6 space-y-4"
+                  style={{ color: "white", lineHeight: "30px", marginRight: "0px" }}
+                >
                   <p>
-                    Education is evolving, and so are the ideas that shape how children learn, think, and grow. Through the Rising India School of Excellence Blog, explore perspectives on future-ready learning, technology, innovation, creativity, leadership, parenting, and student experiences.
+                    Education is evolving, and so are the ideas that shape how
+                    children learn, think, and grow. Through the Rising India
+                    School of Excellence Blog, explore perspectives on
+                    future-ready learning, technology, innovation, creativity,
+                    leadership, parenting, and student experiences.
                   </p>
                   <p>
-                    You’ll discover how learning comes alive through real-world experiences, collaboration, curiosity, and purposeful exploration — helping students build the skills and mindset they need for an ever-changing world.
+                    You’ll discover how learning comes alive through real-world
+                    experiences, collaboration, curiosity, and purposeful
+                    exploration — helping students build the skills and mindset
+                    they need for an ever-changing world.
                   </p>
                   <p>
-                    Because education is not just about learning for today.<br />
-                    It’s about preparing young minds to imagine, create, and shape tomorrow.
+                    Because education is not just about learning for today.
+                    <br />
+                    It’s about preparing young minds to imagine, create, and
+                    shape tomorrow.
                   </p>
                 </div>
               </div>
@@ -147,7 +157,7 @@ export default function BlogPage() {
           </div>
         </section>
 
-        {/* Post cards — styled section instead of plain white */}
+        {/* Post cards */}
         <section
           style={{
             position: "relative",

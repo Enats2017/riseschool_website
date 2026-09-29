@@ -1,8 +1,15 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { dinNext } from "@/app/fonts";
 
 export default function Footer() {
+  // The Future 100 landing page uses a slimmer footer on phones (no link columns / social buttons).
+  const pathname = usePathname();
+  const lp = (pathname || "").replace(/\/$/, "") === "/admissions/preschool";
+
   return (
     <footer className="bg-[#831719] text-white px-2 md:px-4 py-8 md:py-16 overflow-x-hidden">
       <div className="w-full">
@@ -21,13 +28,13 @@ export default function Footer() {
                 className="brightness-0 invert"
               />
             </div>
-            <p className="text-base leading-relaxed opacity-90 max-w-[300px] md:max-w-full">
+            <p className={`text-base leading-relaxed opacity-90 max-w-[300px] md:max-w-full ${lp ? "max-md:text-[12px] max-md:leading-[1.7]" : ""}`}>
               Rising India School of Excellence is Goa’s first Apple-enabled, future-ready school blending global curriculum with personalized learning. Designed to nurture leaders, innovators, and changemakers, it is the School of Tomorrow, built today.
             </p>
           </div>
 
           {/* Links Section */}
-          <div className="md:col-span-1">
+          <div className={`md:col-span-1 ${lp ? "max-md:hidden" : ""}`}>
             <h3 className={`text-[22px] md:text-[26px] mb-6 ${dinNext.className}`}>Company</h3>
 
             {/* Mobile: two columns */}
@@ -56,7 +63,7 @@ export default function Footer() {
           </div>
 
           {/* Programs & Policies */}
-          <div className="md:col-span-1 transform translate-y-8">
+          <div className={`md:col-span-1 transform translate-y-8 ${lp ? "max-md:hidden" : ""}`}>
 
             {/* Mobile: two columns */}
           
@@ -72,8 +79,8 @@ export default function Footer() {
 
           {/* Contact */}
           <div className="flex flex-col items-center md:items-start ">
-            <h3 className={`text-[22px] md:text-[26px] mb-6 ${dinNext.className}`}>Contact Us</h3>
-            <div className="space-y-4 text-[17px]">
+            <h3 className={`text-[22px] md:text-[26px] mb-6 ${dinNext.className} ${lp ? "max-md:text-[17px] max-md:font-bold max-md:[font-family:inherit]!" : ""}`}>Contact Us</h3>
+            <div className={`space-y-4 text-[17px] ${lp ? "max-md:text-[12.5px]" : ""}`}>
               <p className="leading-relaxed break-words">
               Yashvitaru Education Trust, Gulf of Goa, Survey no 178/1, A-Q of Sancoale Village, Mormugao, Goa 403710 
               </p>
@@ -91,12 +98,12 @@ export default function Footer() {
 
                 {/* Bottom Section */}
                 <div className="mt-12 pt-8 border-t border-red-700 flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="text-[16px] md:text-[18px]">
+          <div className={`text-[16px] md:text-[18px] ${lp ? "max-md:text-[12px]" : ""}`}>
             &copy; 2025 <span className="font-semibold">Rising India School of Excellence.</span> <span className="opacity-70">All Right Reserved.</span>
           </div>
 
           {/* Social Buttons */}
-          <div className="flex gap-4">
+          <div className={`flex gap-4 ${lp ? "max-md:hidden" : ""}`}>
             <Link 
               href="https://www.instagram.com/risingindiaschoolofexcellence?stkn=YWN4eWp6dWw2NDU5&utm_source=qr"
               target="_blank"

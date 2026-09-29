@@ -140,3 +140,103 @@ div.cta {
     margin-top: calc(90 * var(--u));
   }
 }
+
+.deco,
+.tagBreak {
+  display: none;
+}
+
+/* ---------- Mobile (< 640px): heading, copy, then a full-bleed photo with the CTA on it ---------- */
+@media (max-width: 639px) {
+  .intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: calc(70 * var(--mu)) 0 0;
+    overflow: hidden;
+  }
+
+  /* let the copy blocks become flex items so the photo can sit after them */
+  .inner,
+  .copy {
+    display: contents;
+  }
+
+  .copy header {
+    order: 1;
+    position: relative;
+    z-index: 2;
+    width: calc(100% - 2 * var(--f100-gutter));
+    margin-bottom: calc(26 * var(--mu));
+    text-align: center;
+  }
+
+  .copy header h2 > span:first-child {
+    font-weight: 400;
+  }
+
+  .deco {
+    display: block;
+    position: absolute;
+    height: auto;
+    pointer-events: none;
+  }
+
+  .decoAb {
+    left: calc(20 * var(--mu));
+    top: calc(63 * var(--mu));
+    width: calc(54 * var(--mu));
+  }
+
+  .decoRocket {
+    right: calc(40 * var(--mu));
+    top: calc(79 * var(--mu));
+    width: calc(47 * var(--mu));
+  }
+
+  .tagBreak {
+    display: inline;
+  }
+
+  .tagline {
+    order: 2;
+    position: relative;
+    z-index: 2;
+    margin: 0 var(--f100-gutter) calc(40 * var(--mu));
+    text-align: center;
+    font-size: max(15px, calc(28 * var(--mu)));
+    line-height: 1.35;
+  }
+
+  .body {
+    order: 3;
+    position: relative;
+    z-index: 2;
+    max-width: none;
+    margin: 0 calc(46 * var(--mu));
+    text-align: center;
+    font-size: max(13.5px, calc(28 * var(--mu)));
+    line-height: 1.58;
+  }
+
+  .media {
+    order: 4;
+    z-index: 1;
+    width: 100%;
+    height: calc(589 * var(--mu));
+    margin-top: calc(-125 * var(--mu));
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 24%);
+    mask-image: linear-gradient(to bottom, transparent 0%, #000 24%);
+  }
+
+  /* the button sits on the lower part of the photo */
+  div.cta {
+    order: 5;
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    justify-content: center;
+    margin-top: calc(-63 * var(--mu) - var(--btn-h));
+    margin-bottom: calc(63 * var(--mu));
+  }
+}

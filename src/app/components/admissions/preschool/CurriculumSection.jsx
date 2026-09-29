@@ -8,6 +8,7 @@ import styles from "./Curriculum.module.css";
 import ui from "./shared.module.css";
 import SectionHeading from "./SectionHeading";
 import ApplyButton from "./ApplyButton";
+import { AbBlock, Rocket } from "./Doodles";
 import { DISCOVERY } from "./data";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
@@ -33,6 +34,21 @@ const OUTLINES = [
   "M98 16c47-2 82 34 82 82 0 48-36 82-82 82-45 0-79-35-78-82 1-46 32-80 78-82z",
   "M102 18c45 2 77 33 77 80 0 49-33 82-79 81-46-1-78-33-79-80-1-46 35-83 81-81z",
 ];
+
+function LoopArrowH({ className }) {
+  // small hand-drawn arrow used on phones; points right, mirrored in CSS for the left-hand labels
+  return (
+    <svg className={className} viewBox="0 0 100 40" fill="none" aria-hidden="true" focusable="false">
+      <path
+        d="M3 36C8 22 20 12 33 15c9 2 8 13 0 12s-8-11 5-18c14-8 34-8 55-3"
+        stroke="currentColor"
+        strokeWidth="2.6"
+        strokeLinecap="round"
+      />
+      <path d="M83 1l14 5-11 10" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
 
 function LetterCircle({ letter, color, index }) {
   const outline = OUTLINES[index % OUTLINES.length];
@@ -96,6 +112,8 @@ export default function CurriculumSection() {
           title="Child Learn -"
           accent="Curriculum Offered"
         >
+          <AbBlock className={`${styles.deco} ${styles.decoAb}`} />
+          <Rocket className={`${styles.deco} ${styles.decoRocket}`} />
           <p className={ui.intro}>
             We are the preschool programme which goes beyond numeracy and literacy to develop a ‘whole child’ by
             following 9 domains of learning – The DISCOVERY WAY
@@ -103,14 +121,6 @@ export default function CurriculumSection() {
         </SectionHeading>
 
         <div data-anim="word">
-          {/* compact word mark for phones & tablets (desktop circles spell the word themselves) */}
-          <p className={styles.word} aria-hidden="true">
-            {DISCOVERY.map((d) => (
-              <span key={d.letter} className={styles.wordLetter} style={{ "--c": d.color }}>
-                {d.letter}
-              </span>
-            ))}
-          </p>
 
           <ol className={styles.domains} aria-label="The 9 DISCOVERY domains of learning">
             {DISCOVERY.map((d, i) => (
@@ -123,6 +133,7 @@ export default function CurriculumSection() {
                 <span className={styles.circle} data-anim="letter" aria-hidden="true">
                   <LetterCircle letter={d.letter} color={d.color} index={i} />
                   <LoopArrow className={styles.arrow} />
+                  <LoopArrowH className={styles.harrow} />
                 </span>
                 <div className={styles.label}>
                   <h3 className={styles.domainTitle}>

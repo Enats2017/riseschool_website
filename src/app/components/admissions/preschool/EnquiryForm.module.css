@@ -230,3 +230,74 @@
     font-size: max(10px, calc(13 * var(--u)));
   }
 }
+
+/* ---------- Mobile (< 640px): measured from the 786px artboard ----------
+   Everything scales with --mu (1 design px = 100vw / 786). The px floors are kept low
+   so the card matches the design on real phones; inputs never drop below 26px tall. */
+@media (max-width: 639px) {
+  .form {
+    padding: calc(16 * var(--mu)) calc(32 * var(--mu)) calc(30 * var(--mu));
+  }
+
+  .title {
+    padding-bottom: calc(10 * var(--mu));
+    margin-bottom: calc(20 * var(--mu));
+    border-bottom-width: 1px;
+    font-size: max(12px, calc(41 * var(--mu)));
+    line-height: 1.2;
+  }
+
+  .grid {
+    gap: calc(17 * var(--mu));
+  }
+
+  .field {
+    gap: calc(11 * var(--mu));
+  }
+
+  .field label {
+    font-size: max(10px, calc(20 * var(--mu)));
+    font-weight: 400;
+    line-height: 1.2;
+    color: #1f1f1f;
+  }
+
+  /* 16px text keeps iOS from zooming on focus */
+  .field input,
+  .field select {
+    height: max(26px, calc(39 * var(--mu)));
+    padding: 0 calc(10 * var(--mu));
+    border-color: #cfcfcf;
+    border-radius: max(4px, calc(6 * var(--mu)));
+  }
+
+  .field select {
+    padding-right: calc(40 * var(--mu));
+  }
+
+  /* the design shows the dropdowns empty: no placeholder text (the label above says what it is) */
+  .field select[data-empty="true"] {
+    color: transparent;
+  }
+
+  .chevron {
+    right: calc(12 * var(--mu));
+    width: max(11px, calc(22 * var(--mu)));
+    height: auto;
+  }
+
+  .submit {
+    min-width: max(100px, calc(195 * var(--mu)));
+    min-height: max(26px, calc(38 * var(--mu)));
+    margin-top: calc(29 * var(--mu));
+    padding: 0 calc(20 * var(--mu));
+    border-radius: max(3px, calc(4 * var(--mu)));
+    font-size: max(11px, calc(20 * var(--mu)));
+    font-weight: 700;
+  }
+
+  /* not part of the phone design */
+  .consent {
+    display: none;
+  }
+}

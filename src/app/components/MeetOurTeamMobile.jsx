@@ -11,7 +11,7 @@ const team = [
         id: 1,
         name: "PAYAL GABA",
         role: "President – Rising India School Excellence Management Private Limited",
-        img: "/images/team/payal-gaba.webp",
+        img: "/images/team/payal-gaba.png",
     },
     {
         id: 2,

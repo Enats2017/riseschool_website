@@ -358,3 +358,140 @@
     white-space: nowrap;
   }
 }
+
+/* ---------- Mobile (< 640px): 786px artboard, 1 design px = var(--mu) ---------- */
+@media (max-width: 639px) {
+  .bandInner {
+    border-top: 0;
+  }
+
+  /* only "Only 100 children" and "Prestigious scholarship" on phones */
+  .highlights {
+    display: flex;
+    justify-content: center;
+    gap: calc(110 * var(--mu));
+    padding: 9px 0;
+    font-size: max(10.5px, calc(20 * var(--mu)));
+    font-weight: 400;
+    letter-spacing: 0.02em;
+  }
+
+  .highlights li:first-child,
+  .highlights li:last-child {
+    display: none;
+  }
+
+  .top {
+    padding-top: calc(34 * var(--mu));
+    padding-bottom: 0;
+  }
+
+  .copy {
+    text-align: center;
+  }
+
+  .title {
+    font-size: max(26px, calc(60 * var(--mu)));
+    line-height: 1.17;
+  }
+
+  .line {
+    margin-inline: auto;
+  }
+
+  /* loop-plane trail (left) and light bulb (right) flank the headline */
+  .decoPlane {
+    display: block;
+    left: calc(-18 * var(--mu));
+    right: auto;
+    top: calc(27 * var(--mu));
+    width: calc(148 * var(--mu));
+  }
+
+  .decoBulb {
+    display: block;
+    left: auto;
+    right: calc(8 * var(--mu));
+    top: calc(41 * var(--mu));
+    width: calc(55 * var(--mu));
+  }
+
+  .choose {
+    margin-top: calc(14 * var(--mu));
+    font-size: max(12.5px, calc(27.5 * var(--mu)));
+    line-height: 1.3;
+  }
+
+  .facts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0;
+    width: auto;
+    max-width: none;
+    margin: calc(24 * var(--mu)) calc(25 * var(--mu)) 0;
+    padding: calc(10 * var(--mu)) 0 calc(14 * var(--mu));
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    font-size: max(11px, calc(23 * var(--mu)));
+    line-height: 1.3;
+    text-align: center;
+  }
+
+  .facts li:not(:last-child)::after {
+    content: "|";
+    margin: 0 0.4em;
+  }
+
+  /* photo starts just above the facts strip and fades in from white */
+  .photo {
+    height: calc(335 * var(--mu));
+    margin-top: calc(-76 * var(--mu));
+  }
+
+  .photo::after {
+    background: linear-gradient(
+      to bottom,
+      #fff 0%,
+      rgba(255, 255, 255, 0.92) 14%,
+      rgba(255, 255, 255, 0.55) 22%,
+      rgba(255, 255, 255, 0) 34%
+    );
+  }
+
+  /* maroon block: rounded top, admissions line, CTA, then the form card */
+  .bar {
+    border-radius: calc(30 * var(--mu)) calc(30 * var(--mu)) 0 0;
+  }
+
+  .barInner {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: calc(8 * var(--mu));
+    padding-block: calc(8 * var(--mu)) calc(35 * var(--mu));
+  }
+
+  .barText {
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    font-size: max(11.5px, calc(25 * var(--mu)));
+  }
+
+  /* -1px overlap hides the light hairline that fractional heights leave between bar and form */
+  .bar {
+    margin-bottom: -1px;
+  }
+
+  .formLayer {
+    background: var(--f100-maroon);
+    padding-bottom: calc(41 * var(--mu));
+  }
+
+  .formCard {
+    width: max(240px, calc(512 * var(--mu)));
+    max-width: 100%;
+    border: 0;
+    border-radius: max(22px, calc(40 * var(--mu)));
+    box-shadow: calc(6 * var(--mu)) calc(8 * var(--mu)) calc(16 * var(--mu)) rgba(0, 0, 0, 0.35);
+  }
+}

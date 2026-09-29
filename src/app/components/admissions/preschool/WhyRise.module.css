@@ -119,3 +119,66 @@
     margin-top: calc(72 * var(--u));
   }
 }
+
+.deco {
+  display: none;
+}
+
+/* ---------- Mobile (< 640px): three columns, like the design ---------- */
+@media (max-width: 639px) {
+  .section {
+    padding-block: calc(50 * var(--mu));
+  }
+
+  .head > header {
+    position: relative;
+    margin-bottom: calc(50 * var(--mu));
+  }
+
+  .deco {
+    display: block;
+    position: absolute;
+    height: auto;
+    pointer-events: none;
+  }
+
+  .bulb {
+    left: calc(10 * var(--mu));
+    top: 0;
+    width: calc(50 * var(--mu));
+  }
+
+  .plane {
+    right: 0;
+    top: calc(-14 * var(--mu));
+    width: calc(140 * var(--mu));
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: calc(64 * var(--mu)) 0;
+  }
+
+  .card {
+    padding: 0;
+  }
+
+  .icon {
+    width: max(28px, calc(54 * var(--mu)));
+    height: max(28px, calc(54 * var(--mu)));
+    margin-bottom: calc(14 * var(--mu));
+  }
+
+  .cardHeading {
+    margin-bottom: calc(8 * var(--mu));
+    font-size: max(10px, calc(21 * var(--mu)));
+    letter-spacing: 0;
+    white-space: nowrap;
+  }
+
+  .cardText {
+    max-width: none;
+    font-size: max(10.5px, calc(21 * var(--mu)));
+    line-height: 1.3;
+  }
+}

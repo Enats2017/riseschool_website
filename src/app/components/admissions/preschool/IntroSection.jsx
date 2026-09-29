@@ -3,6 +3,7 @@ import styles from "./Intro.module.css";
 import ui from "./shared.module.css";
 import SectionHeading from "./SectionHeading";
 import ApplyButton from "./ApplyButton";
+import { AbBlock, Rocket } from "./Doodles";
 import { IMAGE_BASE } from "./data";
 
 export default function IntroSection() {
@@ -30,9 +31,13 @@ export default function IntroSection() {
             lead="Not Just Another Preschool"
             title="It’s Their"
             accent="First International Preschool"
-          />
+            accentBreak
+          >
+            <AbBlock className={`${styles.deco} ${styles.decoAb}`} />
+            <Rocket className={`${styles.deco} ${styles.decoRocket}`} />
+          </SectionHeading>
 
-          <p className={styles.tagline}>At RISE, children don&apos;t simply learn. They discover.</p>
+          <p className={styles.tagline}>At RISE,<br className={styles.tagBreak} /> children don&apos;t simply learn. They discover.</p>
 
           <p className={styles.body}>
             Our preschool programme combines a child-centred{" "}

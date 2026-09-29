@@ -1,6 +1,6 @@
 import { Boogaloo } from "next/font/google";
 import ui from "./shared.module.css";
-import TopBar from "./TopBar";
+import TopBar from "./Topbar";
 import AnnouncementBar from "./AnnouncementBar";
 import HeroSection from "./HeroSection";
 import IntroSection from "./IntroSection";

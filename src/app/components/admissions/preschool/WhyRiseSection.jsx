@@ -16,6 +16,7 @@ import styles from "./WhyRise.module.css";
 import ui from "./shared.module.css";
 import SectionHeading from "./SectionHeading";
 import ApplyButton from "./ApplyButton";
+import { BulbDoodle, PaperPlane } from "./Doodles";
 import { WHY_RISE } from "./data";
 
 const ICONS = {
@@ -51,7 +52,10 @@ export default function WhyRiseSection() {
     <section className={`${styles.section} ${ui.sky}`} aria-labelledby="f100-why-title">
       <div className={ui.container}>
         <div className={styles.head}>
-          <SectionHeading id="f100-why-title" title="RISE Their" accent="Best Start" />
+          <SectionHeading id="f100-why-title" lead="What Makes" title="RISE Their" accent="Best Start">
+            <BulbDoodle className={`${styles.deco} ${styles.bulb}`} />
+            <PaperPlane className={`${styles.deco} ${styles.plane}`} />
+          </SectionHeading>
         </div>
 
         <ul className={styles.grid}>

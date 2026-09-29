@@ -214,6 +214,53 @@
   }
 }
 
+/* ---------- Top bar (logo + call) ---------- */
+
+.topbar {
+  background: #fff;
+}
+
+.topbarInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-block: 12px;
+}
+
+.topLogo {
+  display: block;
+  width: 150px;
+  height: auto;
+  pointer-events: none; /* not clickable */
+  user-select: none;
+}
+
+.topCall {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #831719;
+  white-space: nowrap;
+}
+
+.numCompact {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .topLogo {
+    width: 220px;
+  }
+}
+
+/* line break that only exists on phones (used to match the mobile artboard's line breaks) */
+.mbr {
+  display: none;
+}
+
 /* visually hidden, still announced */
 .srOnly {
   position: absolute;
@@ -232,5 +279,85 @@
   .apply:hover {
     transition: none;
     transform: none;
+  }
+}
+
+/* =====================================================================
+   Mobile (< 640px): matches "Mobile Version – Future 100" artboard.
+   The artboard is 786px wide, so 1 design px = 100vw / 786.
+   ===================================================================== */
+@media (max-width: 639px) {
+  .page {
+    --mu: calc(100vw / 786);
+    --f100-gutter: calc(30 * var(--mu));
+    --f100-section-y: calc(60 * var(--mu));
+    --btn-h: max(40px, calc(50 * var(--mu)));
+  }
+
+  .heading {
+    margin-bottom: calc(50 * var(--mu));
+  }
+
+  .mbr {
+    display: inline;
+  }
+
+  /* logo left, number right, exactly as far apart as the 786px artboard */
+  .topbarInner {
+    padding-block: calc(25 * var(--mu));
+  }
+
+  .topLogo {
+    width: calc(215 * var(--mu));
+  }
+
+  .topCall {
+    font-size: max(11px, calc(24 * var(--mu)));
+  }
+
+  .topCallIcon {
+    display: none;
+  }
+
+  .numFull {
+    display: none;
+  }
+
+  .numCompact {
+    display: inline;
+  }
+
+  .lead {
+    font-size: max(15px, calc(38 * var(--mu)));
+    line-height: 1.25;
+  }
+
+  .display {
+    font-size: max(25px, calc(60 * var(--mu)));
+    line-height: 1.12;
+  }
+
+  /* the design has no intro paragraph under the headings on phones */
+  .intro {
+    display: none;
+  }
+
+  .ctaRow {
+    margin-top: calc(50 * var(--mu));
+  }
+
+  .apply {
+    min-height: var(--btn-h);
+    padding: 0 calc(52 * var(--mu));
+    border-radius: calc(6 * var(--mu));
+    font-size: max(15px, calc(33 * var(--mu)));
+    box-shadow: none;
+  }
+
+  .applyFuture {
+    min-height: max(30px, calc(47 * var(--mu)));
+    padding: 0 calc(18 * var(--mu));
+    font-size: max(13px, calc(34 * var(--mu)));
+    box-shadow: 0 0 calc(30 * var(--mu)) rgba(252, 184, 19, 0.6);
   }
 }
